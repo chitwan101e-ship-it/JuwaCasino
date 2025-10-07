@@ -1,0 +1,2 @@
+import React from 'react'
+export function Textarea(props) { return <textarea {...props} className={`w-full rounded-xl border border-white/20 bg-transparent px-3 py-2 text-sm text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 ${props.className ?? ''}`} /> }
