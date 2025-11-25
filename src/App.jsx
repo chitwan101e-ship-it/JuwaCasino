@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { Slider } from "@/components/ui/slider";
-import { Sparkles, Rocket, LayoutGrid, Settings, ExternalLink, ShieldCheck, Menu, X } from "lucide-react";
+import { Sparkles, Rocket, LayoutGrid, Settings, ExternalLink, ShieldCheck, Menu, X, CheckCircle, AlertCircle } from "lucide-react";
 
 export default function WebsiteLiveStarter() {
   const [logoUrl] = useState("/logo.png");
@@ -704,44 +704,186 @@ export default function WebsiteLiveStarter() {
     </section>
   );
 
-  const ContactPage = () => (
-    <section className="px-6 md:px-10 py-12">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col items-center mb-8">
-          <img src={logoUrl} alt="Logo" className="h-32 md:h-40 w-auto mb-6" />
-          <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-900 dark:text-white text-center">Contact & Support</h2>
-        </div>
-        <div className="mt-6 grid md:grid-cols-2 gap-5">
-          <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
-            <CardContent className="p-6 space-y-4">
-              <div>
-                <label className="text-sm">Your email</label>
-                <Input placeholder="you@example.com" />
-              </div>
-              <div>
-                <label className="text-sm">Message</label>
-                <Textarea rows={4} placeholder="How can we help?" />
-              </div>
-              <Button className="bg-red-600 hover:bg-red-700 text-white border-red-600">Send</Button>
-            </CardContent>
-          </Card>
-          <div className="space-y-4">
-            <Card className="border border-neutral-200/60 dark:border-neutral-800/60"><CardContent className="p-5"><div className="font-semibold">Live chat</div><p className="text-sm text-neutral-600 dark:text-neutral-300">Chat with an agent 24/7.</p></CardContent></Card>
-            <Card className="border border-neutral-200/60 dark:border-neutral-800/60"><CardContent className="p-5"><div className="font-semibold">Email support</div><p className="text-sm text-neutral-600 dark:text-neutral-300">support@example.com</p></CardContent></Card>
-            <a href="#faq" className="block group">
-              <Card className="border border-neutral-200/60 dark:border-neutral-800/60 cursor-pointer hover:bg-neutral-50 dark:hover:bg-neutral-800/50 hover:border-red-500 dark:hover:border-red-500 active:bg-red-50 dark:active:bg-red-900/20 active:border-red-500 transition-all duration-200 hover:shadow-md active:shadow-lg">
-                <CardContent className="p-5">
-                  <div className="font-semibold text-neutral-900 dark:text-white group-hover:text-red-600 group-active:text-red-600 transition-colors duration-200">FAQ</div>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-300">Payouts, verification, and responsible play.</p>
-                  <div className="mt-2 text-xs text-red-600 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-200">Tap to view FAQ →</div>
-                </CardContent>
-              </Card>
-            </a>
+  const ContactPage = () => {
+    const [name, setName] = useState("");
+    const [userEmail, setUserEmail] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [message, setMessage] = useState("");
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
+
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      
+      // Validation
+      if (!name || name.trim().length < 2) {
+        setSubmitStatus("error");
+        setTimeout(() => setSubmitStatus(null), 3000);
+        return;
+      }
+
+      if (!userEmail || !userEmail.includes("@")) {
+        setSubmitStatus("error");
+        setTimeout(() => setSubmitStatus(null), 3000);
+        return;
+      }
+      
+      if (!message || message.trim().length < 10) {
+        setSubmitStatus("error");
+        setTimeout(() => setSubmitStatus(null), 3000);
+        return;
+      }
+
+      setIsSubmitting(true);
+      setSubmitStatus(null);
+
+      try {
+        // Call the serverless function API endpoint
+        // This will use Namecheap SMTP to send the email
+        const response = await fetch('https://v0-email-sending-function.vercel.app/api/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: name,
+            userEmail: userEmail,
+            phoneNumber: phoneNumber,
+            message: message,
+          }),
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data.error || 'Failed to send email');
+        }
+        
+        setSubmitStatus("success");
+        setName("");
+        setUserEmail("");
+        setPhoneNumber("");
+        setMessage("");
+        setTimeout(() => setSubmitStatus(null), 5000);
+      } catch (error) {
+        console.error("Email sending failed:", error);
+        setSubmitStatus("error");
+        setTimeout(() => setSubmitStatus(null), 5000);
+      } finally {
+        setIsSubmitting(false);
+      }
+    };
+
+    return (
+      <section className="px-6 md:px-10 py-12">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col items-center mb-8">
+            <img src={logoUrl} alt="Logo" className="h-32 md:h-40 w-auto mb-6" />
+            <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-900 dark:text-white text-center">Contact & Support</h2>
+          </div>
+          <div className="mt-6 grid md:grid-cols-2 gap-5">
+            <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
+              <CardContent className="p-6 space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <label className="text-sm text-neutral-700 dark:text-neutral-300 mb-2 block">Name *</label>
+                    <Input 
+                      type="text"
+                      placeholder="Your full name" 
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                      disabled={isSubmitting}
+                      className="w-full"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-sm text-neutral-700 dark:text-neutral-300 mb-2 block">Email *</label>
+                    <Input 
+                      type="email"
+                      placeholder="you@example.com" 
+                      value={userEmail}
+                      onChange={(e) => setUserEmail(e.target.value)}
+                      required
+                      disabled={isSubmitting}
+                      className="w-full"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-sm text-neutral-700 dark:text-neutral-300 mb-2 block">Phone Number</label>
+                    <Input 
+                      type="tel"
+                      placeholder="(555) 123-4567" 
+                      value={phoneNumber}
+                      onChange={(e) => setPhoneNumber(e.target.value)}
+                      disabled={isSubmitting}
+                      className="w-full"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-sm text-neutral-700 dark:text-neutral-300 mb-2 block">Message *</label>
+                    <Textarea 
+                      rows={4} 
+                      placeholder="How can we help?" 
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      required
+                      disabled={isSubmitting}
+                      className="w-full"
+                    />
+                  </div>
+                  
+                  {/* Status Messages */}
+                  {submitStatus === "success" && (
+                    <div className="flex items-center gap-2 p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+                      <CheckCircle className="h-5 w-5 text-green-600 dark:text-green-400" />
+                      <p className="text-sm text-green-700 dark:text-green-300">Message sent successfully! We'll get back to you soon.</p>
+                    </div>
+                  )}
+                  
+                  {submitStatus === "error" && (
+                    <div className="flex items-center gap-2 p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
+                      <AlertCircle className="h-5 w-5 text-red-600 dark:text-red-400" />
+                      <p className="text-sm text-red-700 dark:text-red-300">
+                        {!name || name.trim().length < 2
+                          ? "Please enter your name (at least 2 characters)."
+                          : !userEmail || !userEmail.includes("@") 
+                          ? "Please enter a valid email address."
+                          : !message || message.trim().length < 10
+                          ? "Please enter a message (at least 10 characters)."
+                          : "Failed to send message. Please try again or email us directly."}
+                      </p>
+                    </div>
+                  )}
+
+                  <Button 
+                    type="submit"
+                    className="bg-red-600 hover:bg-red-700 text-white border-red-600 w-full"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+            <div className="space-y-4">
+              <Card className="border border-neutral-200/60 dark:border-neutral-800/60"><CardContent className="p-5"><div className="font-semibold">Live chat</div><p className="text-sm text-neutral-600 dark:text-neutral-300">Chat with an agent 24/7.</p></CardContent></Card>
+              <Card className="border border-neutral-200/60 dark:border-neutral-800/60"><CardContent className="p-5"><div className="font-semibold">Email support</div><p className="text-sm text-neutral-600 dark:text-neutral-300">support@juwagame.com</p></CardContent></Card>
+              <a href="#faq" className="block group">
+                <Card className="border border-neutral-200/60 dark:border-neutral-800/60 cursor-pointer hover:bg-neutral-50 dark:hover:bg-neutral-800/50 hover:border-red-500 dark:hover:border-red-500 active:bg-red-50 dark:active:bg-red-900/20 active:border-red-500 transition-all duration-200 hover:shadow-md active:shadow-lg">
+                  <CardContent className="p-5">
+                    <div className="font-semibold text-neutral-900 dark:text-white group-hover:text-red-600 group-active:text-red-600 transition-colors duration-200">FAQ</div>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Payouts, verification, and responsible play.</p>
+                    <div className="mt-2 text-xs text-red-600 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-200">Tap to view FAQ →</div>
+                  </CardContent>
+                </Card>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  );
+      </section>
+    );
+  };
 
   const FAQPage = () => {
     const [openItems, setOpenItems] = useState({});
