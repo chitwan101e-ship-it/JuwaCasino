@@ -1079,6 +1079,23 @@ export default function WebsiteLiveStarter() {
         </main>
       </div>
 
+      {/* Floating Messenger Icon */}
+      <a
+        href="https://www.facebook.com/people/Juwabros/61584859944516/?mibextid=wwXIfr&rdid=zARGvj7WECqqLxY2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19pedxtenu%2F%3Fmibextid%3DwwXIfr"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-white dark:bg-neutral-800 rounded-full p-3 shadow-2xl hover:shadow-[#0866ff]/50 transition-all duration-300 hover:scale-110 active:scale-95 group border-2 border-[#0866ff]"
+        aria-label="Chat with us on Messenger"
+      >
+        <img 
+          src="/Messenger_Icon_Primary_Blue.svg" 
+          alt="Messenger" 
+          className="w-14 h-14 group-hover:scale-105 transition-transform duration-300"
+        />
+        {/* Pulse animation */}
+        <span className="absolute inset-0 rounded-full bg-[#0866ff] animate-ping opacity-30"></span>
+      </a>
+
       <style>{` :root { --accent: hsl(${accentHue} 84% 56%); } `}</style>
     </div>
   );
