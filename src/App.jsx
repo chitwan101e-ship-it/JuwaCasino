@@ -62,7 +62,7 @@ export default function WebsiteLiveStarter() {
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white">{tagline}</h1>
           <p className="mt-4 text-neutral-300 text-base md:text-lg">{heroDesc}</p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Button style={{ background: playNowColor, borderColor: playNowColor }} className="text-white hover:opacity-90" onClick={() => window.open('https://www.facebook.com/juwabros', '_blank')}>
+            <Button style={{ background: playNowColor, borderColor: playNowColor }} className="text-white hover:opacity-90" onClick={() => window.open('https://www.facebook.com/people/Juwabros/61584859944516/?mibextid=wwXIfr&rdid=zARGvj7WECqqLxY2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19pedxtenu%2F%3Fmibextid%3DwwXIfr', '_blank')}>
               <Sparkles className="h-4 w-4 mr-2" /> Play Now
             </Button>
             <Button variant="outline" className="border-white/30 text-white hover:bg-white/10" onClick={() => window.open('https://dl.juwa777.com/', '_blank')}>Download Juwa Now</Button>
@@ -82,7 +82,7 @@ export default function WebsiteLiveStarter() {
             <div className="text-base opacity-90">1st Deposit Offer</div>
             <div className="mt-2 font-extrabold text-white leading-[1.1] tracking-tight [text-wrap:balance]" style={{fontSize:'clamp(28px,4.5vw,40px)'}} dangerouslySetInnerHTML={{ __html: '100% Welcome<br/>Bonus' }}></div>
             <div className="mt-6">
-              <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/juwabros', '_blank')}>Join Now</Button>
+              <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/people/Juwabros/61584859944516/?mibextid=wwXIfr&rdid=zARGvj7WECqqLxY2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19pedxtenu%2F%3Fmibextid%3DwwXIfr', '_blank')}>Join Now</Button>
             </div>
           </div>
 
@@ -95,7 +95,7 @@ export default function WebsiteLiveStarter() {
             <div className="text-base opacity-90">2nd Deposit Offer</div>
             <div className="mt-2 font-extrabold text-white leading-[1.1] tracking-tight [text-wrap:balance]" style={{fontSize:'clamp(28px,4.5vw,40px)'}}>50% Reload Bonus</div>
             <div className="mt-6">
-              <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/juwabros', '_blank')}>Join Now</Button>
+              <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/people/Juwabros/61584859944516/?mibextid=wwXIfr&rdid=zARGvj7WECqqLxY2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19pedxtenu%2F%3Fmibextid%3DwwXIfr', '_blank')}>Join Now</Button>
             </div>
           </div>
 
@@ -108,7 +108,7 @@ export default function WebsiteLiveStarter() {
             <div className="text-base opacity-90">Play together and enjoy</div>
             <div className="mt-2 font-extrabold text-white leading-[1.1] tracking-tight [text-wrap:balance]" style={{fontSize:'clamp(28px,4.5vw,40px)'}}>$5 Referral Bonus</div>
             <div className="mt-6">
-              <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/juwabros', '_blank')}>Join Now</Button>
+              <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/people/Juwabros/61584859944516/?mibextid=wwXIfr&rdid=zARGvj7WECqqLxY2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19pedxtenu%2F%3Fmibextid%3DwwXIfr', '_blank')}>Join Now</Button>
             </div>
           </div>
         </div>
@@ -179,7 +179,7 @@ export default function WebsiteLiveStarter() {
                         <div className="mt-2 font-extrabold text-white leading-[1.1] tracking-tight [text-wrap:balance]" style={{fontSize:'clamp(28px,4.5vw,40px)'}} dangerouslySetInnerHTML={{ __html: banner.title }}></div>
                         {banner.desc && <div className="mt-3 text-sm opacity-90">{banner.desc}</div>}
                         <div className="mt-6">
-                          <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/juwabros', '_blank')}>Join Now</Button>
+                          <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/people/Juwabros/61584859944516/?mibextid=wwXIfr&rdid=zARGvj7WECqqLxY2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19pedxtenu%2F%3Fmibextid%3DwwXIfr', '_blank')}>Join Now</Button>
                         </div>
                       </div>
                     </div>
@@ -264,7 +264,7 @@ export default function WebsiteLiveStarter() {
                           className="bg-white text-neutral-900 hover:opacity-90 text-sm md:text-base px-4 py-2"
                           onClick={() => {
                             if (b.cta === "JOIN THE FUN") {
-                              window.open('https://www.facebook.com/juwabros', '_blank');
+                              window.open('https://www.facebook.com/people/Juwabros/61584859944516/?mibextid=wwXIfr&rdid=zARGvj7WECqqLxY2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19pedxtenu%2F%3Fmibextid%3DwwXIfr', '_blank');
                             } else if (b.cta === "JOIN NOW") {
                               window.open('https://www.facebook.com/juwaloot', '_blank');
                             } else if (b.cta === "FOLLOW NOW") {
@@ -775,17 +775,17 @@ export default function WebsiteLiveStarter() {
     };
 
     return (
-      <section className="px-6 md:px-10 py-12">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col items-center mb-8">
-            <img src={logoUrl} alt="Logo" className="h-32 md:h-40 w-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-900 dark:text-white text-center">Contact & Support</h2>
-          </div>
-          <div className="mt-6 grid md:grid-cols-2 gap-5">
-            <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
-              <CardContent className="p-6 space-y-4">
+    <section className="px-6 md:px-10 py-12">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col items-center mb-8">
+          <img src={logoUrl} alt="Logo" className="h-32 md:h-40 w-auto mb-6" />
+          <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-900 dark:text-white text-center">Contact & Support</h2>
+        </div>
+        <div className="mt-6 grid md:grid-cols-2 gap-5">
+          <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6 space-y-4">
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
+              <div>
                     <label className="text-sm text-neutral-700 dark:text-neutral-300 mb-2 block">Name *</label>
                     <Input 
                       type="text"
@@ -796,8 +796,8 @@ export default function WebsiteLiveStarter() {
                       disabled={isSubmitting}
                       className="w-full"
                     />
-                  </div>
-                  <div>
+              </div>
+              <div>
                     <label className="text-sm text-neutral-700 dark:text-neutral-300 mb-2 block">Email *</label>
                     <Input 
                       type="email"
@@ -808,7 +808,7 @@ export default function WebsiteLiveStarter() {
                       disabled={isSubmitting}
                       className="w-full"
                     />
-                  </div>
+              </div>
                   <div>
                     <label className="text-sm text-neutral-700 dark:text-neutral-300 mb-2 block">Phone Number</label>
                     <Input 
@@ -864,25 +864,25 @@ export default function WebsiteLiveStarter() {
                     {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
-              </CardContent>
-            </Card>
-            <div className="space-y-4">
-              <Card className="border border-neutral-200/60 dark:border-neutral-800/60"><CardContent className="p-5"><div className="font-semibold">Live chat</div><p className="text-sm text-neutral-600 dark:text-neutral-300">Chat with an agent 24/7.</p></CardContent></Card>
+            </CardContent>
+          </Card>
+          <div className="space-y-4">
+            <Card className="border border-neutral-200/60 dark:border-neutral-800/60"><CardContent className="p-5"><div className="font-semibold">Live chat</div><p className="text-sm text-neutral-600 dark:text-neutral-300">Chat with an agent 24/7.</p></CardContent></Card>
               <Card className="border border-neutral-200/60 dark:border-neutral-800/60"><CardContent className="p-5"><div className="font-semibold">Email support</div><p className="text-sm text-neutral-600 dark:text-neutral-300">support@juwagame.com</p></CardContent></Card>
-              <a href="#faq" className="block group">
-                <Card className="border border-neutral-200/60 dark:border-neutral-800/60 cursor-pointer hover:bg-neutral-50 dark:hover:bg-neutral-800/50 hover:border-red-500 dark:hover:border-red-500 active:bg-red-50 dark:active:bg-red-900/20 active:border-red-500 transition-all duration-200 hover:shadow-md active:shadow-lg">
-                  <CardContent className="p-5">
-                    <div className="font-semibold text-neutral-900 dark:text-white group-hover:text-red-600 group-active:text-red-600 transition-colors duration-200">FAQ</div>
-                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Payouts, verification, and responsible play.</p>
-                    <div className="mt-2 text-xs text-red-600 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-200">Tap to view FAQ →</div>
-                  </CardContent>
-                </Card>
-              </a>
-            </div>
+            <a href="#faq" className="block group">
+              <Card className="border border-neutral-200/60 dark:border-neutral-800/60 cursor-pointer hover:bg-neutral-50 dark:hover:bg-neutral-800/50 hover:border-red-500 dark:hover:border-red-500 active:bg-red-50 dark:active:bg-red-900/20 active:border-red-500 transition-all duration-200 hover:shadow-md active:shadow-lg">
+                <CardContent className="p-5">
+                  <div className="font-semibold text-neutral-900 dark:text-white group-hover:text-red-600 group-active:text-red-600 transition-colors duration-200">FAQ</div>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-300">Payouts, verification, and responsible play.</p>
+                  <div className="mt-2 text-xs text-red-600 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-200">Tap to view FAQ →</div>
+                </CardContent>
+              </Card>
+            </a>
           </div>
         </div>
-      </section>
-    );
+      </div>
+    </section>
+  );
   };
 
   const FAQPage = () => {
@@ -1007,7 +1007,7 @@ export default function WebsiteLiveStarter() {
                 <Button variant="outline" className="border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-800/50" onClick={() => window.location.hash = '#faq'}>
                   FAQ
                 </Button>
-                <Button style={{ background: playNowColor, borderColor: playNowColor }} className="text-white hover:opacity-90" onClick={() => window.open('https://www.facebook.com/juwabros', '_blank')}>
+                <Button style={{ background: playNowColor, borderColor: playNowColor }} className="text-white hover:opacity-90" onClick={() => window.open('https://www.facebook.com/people/Juwabros/61584859944516/?mibextid=wwXIfr&rdid=zARGvj7WECqqLxY2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19pedxtenu%2F%3Fmibextid%3DwwXIfr', '_blank')}>
                   <Sparkles className="h-4 w-4 mr-2" />
                   Play now
                 </Button>
@@ -1015,7 +1015,7 @@ export default function WebsiteLiveStarter() {
               
               {/* Mobile Navigation */}
               <div className="flex md:hidden items-center gap-3">
-                <Button style={{ background: playNowColor, borderColor: playNowColor }} className="text-white hover:opacity-90 px-4 py-2" onClick={() => window.open('https://www.facebook.com/juwabros', '_blank')}>
+                <Button style={{ background: playNowColor, borderColor: playNowColor }} className="text-white hover:opacity-90 px-4 py-2" onClick={() => window.open('https://www.facebook.com/people/Juwabros/61584859944516/?mibextid=wwXIfr&rdid=zARGvj7WECqqLxY2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19pedxtenu%2F%3Fmibextid%3DwwXIfr', '_blank')}>
                 <Sparkles className="h-4 w-4 mr-2" />
                 Play now
               </Button>
