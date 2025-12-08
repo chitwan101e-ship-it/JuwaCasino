@@ -62,7 +62,7 @@ export default function WebsiteLiveStarter() {
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white">{tagline}</h1>
           <p className="mt-4 text-neutral-300 text-base md:text-lg">{heroDesc}</p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Button style={{ background: playNowColor, borderColor: playNowColor }} className="text-white hover:opacity-90" onClick={() => window.open('https://www.facebook.com/people/Juwabros/61584859944516/?mibextid=wwXIfr&rdid=zARGvj7WECqqLxY2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19pedxtenu%2F%3Fmibextid%3DwwXIfr', '_blank')}>
+            <Button style={{ background: playNowColor, borderColor: playNowColor }} className="text-white hover:opacity-90" onClick={() => window.open('https://www.facebook.com/people/Fortune-JUWA/61565056061906/?mibextid=wwXIfr&rdid=903GVl4fnaFYCKne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JNy4sFfi2%2F%3Fmibextid%3DwwXIfr', '_blank')}>
               <Sparkles className="h-4 w-4 mr-2" /> Play Now
             </Button>
             <Button variant="outline" className="border-white/30 text-white hover:bg-white/10" onClick={() => window.open('https://dl.juwa777.com/', '_blank')}>Download Juwa Now</Button>
@@ -82,7 +82,7 @@ export default function WebsiteLiveStarter() {
             <div className="text-base opacity-90">1st Deposit Offer</div>
             <div className="mt-2 font-extrabold text-white leading-[1.1] tracking-tight [text-wrap:balance]" style={{fontSize:'clamp(28px,4.5vw,40px)'}} dangerouslySetInnerHTML={{ __html: '100% Welcome<br/>Bonus' }}></div>
             <div className="mt-6">
-              <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/people/Juwabros/61584859944516/?mibextid=wwXIfr&rdid=zARGvj7WECqqLxY2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19pedxtenu%2F%3Fmibextid%3DwwXIfr', '_blank')}>Join Now</Button>
+              <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/people/Fortune-JUWA/61565056061906/?mibextid=wwXIfr&rdid=903GVl4fnaFYCKne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JNy4sFfi2%2F%3Fmibextid%3DwwXIfr', '_blank')}>Join Now</Button>
             </div>
           </div>
 
@@ -95,7 +95,7 @@ export default function WebsiteLiveStarter() {
             <div className="text-base opacity-90">2nd Deposit Offer</div>
             <div className="mt-2 font-extrabold text-white leading-[1.1] tracking-tight [text-wrap:balance]" style={{fontSize:'clamp(28px,4.5vw,40px)'}}>50% Reload Bonus</div>
             <div className="mt-6">
-              <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/people/Juwabros/61584859944516/?mibextid=wwXIfr&rdid=zARGvj7WECqqLxY2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19pedxtenu%2F%3Fmibextid%3DwwXIfr', '_blank')}>Join Now</Button>
+              <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/people/Fortune-JUWA/61565056061906/?mibextid=wwXIfr&rdid=903GVl4fnaFYCKne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JNy4sFfi2%2F%3Fmibextid%3DwwXIfr', '_blank')}>Join Now</Button>
             </div>
           </div>
 
@@ -108,7 +108,7 @@ export default function WebsiteLiveStarter() {
             <div className="text-base opacity-90">Play together and enjoy</div>
             <div className="mt-2 font-extrabold text-white leading-[1.1] tracking-tight [text-wrap:balance]" style={{fontSize:'clamp(28px,4.5vw,40px)'}}>$5 Referral Bonus</div>
             <div className="mt-6">
-              <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/people/Juwabros/61584859944516/?mibextid=wwXIfr&rdid=zARGvj7WECqqLxY2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19pedxtenu%2F%3Fmibextid%3DwwXIfr', '_blank')}>Join Now</Button>
+              <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/people/Fortune-JUWA/61565056061906/?mibextid=wwXIfr&rdid=903GVl4fnaFYCKne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JNy4sFfi2%2F%3Fmibextid%3DwwXIfr', '_blank')}>Join Now</Button>
             </div>
           </div>
         </div>
@@ -179,7 +179,7 @@ export default function WebsiteLiveStarter() {
                         <div className="mt-2 font-extrabold text-white leading-[1.1] tracking-tight [text-wrap:balance]" style={{fontSize:'clamp(28px,4.5vw,40px)'}} dangerouslySetInnerHTML={{ __html: banner.title }}></div>
                         {banner.desc && <div className="mt-3 text-sm opacity-90">{banner.desc}</div>}
                         <div className="mt-6">
-                          <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/people/Juwabros/61584859944516/?mibextid=wwXIfr&rdid=zARGvj7WECqqLxY2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19pedxtenu%2F%3Fmibextid%3DwwXIfr', '_blank')}>Join Now</Button>
+                          <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/people/Fortune-JUWA/61565056061906/?mibextid=wwXIfr&rdid=903GVl4fnaFYCKne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JNy4sFfi2%2F%3Fmibextid%3DwwXIfr', '_blank')}>Join Now</Button>
                         </div>
                       </div>
                     </div>
@@ -264,7 +264,7 @@ export default function WebsiteLiveStarter() {
                           className="bg-white text-neutral-900 hover:opacity-90 text-sm md:text-base px-4 py-2"
                           onClick={() => {
                             if (b.cta === "JOIN THE FUN") {
-                              window.open('https://www.facebook.com/people/Juwabros/61584859944516/?mibextid=wwXIfr&rdid=zARGvj7WECqqLxY2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19pedxtenu%2F%3Fmibextid%3DwwXIfr', '_blank');
+                              window.open('https://www.facebook.com/people/Fortune-JUWA/61565056061906/?mibextid=wwXIfr&rdid=903GVl4fnaFYCKne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JNy4sFfi2%2F%3Fmibextid%3DwwXIfr', '_blank');
                             } else if (b.cta === "JOIN NOW") {
                               window.open('https://www.facebook.com/juwaloot', '_blank');
                             } else if (b.cta === "FOLLOW NOW") {
@@ -1007,7 +1007,7 @@ export default function WebsiteLiveStarter() {
                 <Button variant="outline" className="border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-800/50" onClick={() => window.location.hash = '#faq'}>
                   FAQ
                 </Button>
-                <Button style={{ background: playNowColor, borderColor: playNowColor }} className="text-white hover:opacity-90" onClick={() => window.open('https://www.facebook.com/people/Juwabros/61584859944516/?mibextid=wwXIfr&rdid=zARGvj7WECqqLxY2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19pedxtenu%2F%3Fmibextid%3DwwXIfr', '_blank')}>
+                <Button style={{ background: playNowColor, borderColor: playNowColor }} className="text-white hover:opacity-90" onClick={() => window.open('https://www.facebook.com/people/Fortune-JUWA/61565056061906/?mibextid=wwXIfr&rdid=903GVl4fnaFYCKne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JNy4sFfi2%2F%3Fmibextid%3DwwXIfr', '_blank')}>
                   <Sparkles className="h-4 w-4 mr-2" />
                   Play now
                 </Button>
@@ -1015,7 +1015,7 @@ export default function WebsiteLiveStarter() {
               
               {/* Mobile Navigation */}
               <div className="flex md:hidden items-center gap-3">
-                <Button style={{ background: playNowColor, borderColor: playNowColor }} className="text-white hover:opacity-90 px-4 py-2" onClick={() => window.open('https://www.facebook.com/people/Juwabros/61584859944516/?mibextid=wwXIfr&rdid=zARGvj7WECqqLxY2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19pedxtenu%2F%3Fmibextid%3DwwXIfr', '_blank')}>
+                <Button style={{ background: playNowColor, borderColor: playNowColor }} className="text-white hover:opacity-90 px-4 py-2" onClick={() => window.open('https://www.facebook.com/people/Fortune-JUWA/61565056061906/?mibextid=wwXIfr&rdid=903GVl4fnaFYCKne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JNy4sFfi2%2F%3Fmibextid%3DwwXIfr', '_blank')}>
                 <Sparkles className="h-4 w-4 mr-2" />
                 Play now
               </Button>
@@ -1100,7 +1100,7 @@ export default function WebsiteLiveStarter() {
 
         {/* Messenger Icon */}
         <a
-          href="https://www.facebook.com/people/Juwabros/61584859944516/?mibextid=wwXIfr&rdid=zARGvj7WECqqLxY2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19pedxtenu%2F%3Fmibextid%3DwwXIfr"
+          href="https://www.facebook.com/people/Fortune-JUWA/61565056061906/?mibextid=wwXIfr&rdid=903GVl4fnaFYCKne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JNy4sFfi2%2F%3Fmibextid%3DwwXIfr"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-white dark:bg-neutral-800 rounded-full p-3 shadow-2xl hover:shadow-[#0866ff]/50 transition-all duration-300 hover:scale-110 active:scale-95 group border-2 border-[#0866ff]"
