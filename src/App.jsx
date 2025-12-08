@@ -27,7 +27,7 @@ export default function WebsiteLiveStarter() {
 
   // Controls
   const [tagline, setTagline] = useState("BE A BIG WINNER WITH OUR HOT JACKPOT");
-  const [heroDesc, setHeroDesc] = useState("Experience unmatched quality in gameplay and customer service.");
+  const [heroDesc, setHeroDesc] = useState("Experience unmatched quality in gameplay and customer service. Play Juwa777 - the premier Juwa game platform with over 100 free social casino games.");
   const [dark, setDark] = useState(true);
   const [featureCount, setFeatureCount] = useState(3);
   const [accentHue, setAccentHue] = useState(226);
@@ -369,7 +369,7 @@ export default function WebsiteLiveStarter() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">Free social slots and casino-style games</h2>
-            <p className="text-neutral-300 text-base md:text-lg">With over 200 social casino games to choose from, there is always something new to play.</p>
+            <p className="text-neutral-300 text-base md:text-lg">Juwa777 offers over 200 social casino games to choose from. Play the best Juwa game collection including slots, fish games, keno, and instant win games. There is always something new to play on Juwagame.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="rounded-3xl p-6 md:p-8 bg-gradient-to-b from-pink-500 to-pink-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] flex flex-col items-center justify-center text-center min-h-[200px]">
@@ -1071,7 +1071,7 @@ export default function WebsiteLiveStarter() {
                   <span className="text-sm text-neutral-600 dark:text-neutral-300">© 2025 All rights reserved.</span>
                 </div>
                 <div className="text-sm text-neutral-600 dark:text-neutral-300">
-                  Copyright 2023, the Juwa777. All rights reserved. Gambling should be entertaining. Remember that you always risk losing the money you bet, so do not spend more than you can afford to lose. If you think you may have a problem, click here.
+                  Copyright 2023, Juwa777 (Juwagame). All rights reserved. Play Juwa game responsibly. Gambling should be entertaining. Remember that you always risk losing the money you bet, so do not spend more than you can afford to lose. If you think you may have a problem, click here.
                 </div>
               </div>
             </footer>
