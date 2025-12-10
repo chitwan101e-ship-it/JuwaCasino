@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { Slider } from "@/components/ui/slider";
-import { Sparkles, Rocket, LayoutGrid, Settings, ExternalLink, ShieldCheck, Menu, X, CheckCircle, AlertCircle } from "lucide-react";
+import { Sparkles, Rocket, LayoutGrid, Settings, ExternalLink, ShieldCheck, Menu, X, CheckCircle, AlertCircle, Download, Smartphone, FileDown, Settings2, Play, ArrowRight, Shield, Clock, Package, Gift, DollarSign, Percent, Users, Info, Globe, Monitor, Lock, Wifi, Gamepad2, LogIn, HelpCircle, Zap, Star, Battery, RefreshCw, Trash2 } from "lucide-react";
 
 export default function WebsiteLiveStarter() {
   const [logoUrl] = useState("/logo.png");
@@ -19,6 +19,8 @@ export default function WebsiteLiveStarter() {
       const newRoute = window.location.hash.replace('#','') || 'home';
       console.log('Route changing to:', newRoute);
       setRoute(newRoute);
+      // Scroll to top when route changes
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     };
     sync();
     window.addEventListener('hashchange', sync);
@@ -27,7 +29,7 @@ export default function WebsiteLiveStarter() {
 
   // Controls
   const [tagline, setTagline] = useState("BE A BIG WINNER WITH OUR HOT JACKPOT");
-  const [heroDesc, setHeroDesc] = useState("Experience unmatched quality in gameplay and customer service. Play Juwa777 - the premier Juwa game platform with over 100 free social casino games.");
+  const [heroDesc, setHeroDesc] = useState("Download Juwa777 app for Android and iOS - Juwa 2.0 with over 100 free casino games. Play slots, fish games, and keno. Get welcome bonuses and start winning real money today!");
   const [dark, setDark] = useState(true);
   const [featureCount, setFeatureCount] = useState(3);
   const [accentHue, setAccentHue] = useState(226);
@@ -676,29 +678,1453 @@ export default function WebsiteLiveStarter() {
     </section>
   );
 
-  const BlogPage = () => (
-    <section className="px-6 md:px-10 py-12">
-      <div className="max-w-6xl">
-        <div className="text-center mb-8">
-          <div className="bg-neutral-900 dark:bg-black rounded-2xl p-8 mb-6">
-            <h1 className="text-4xl md:text-6xl font-bold text-neutral-300 dark:text-neutral-400 italic tracking-wider">
-              COMING SOON
-            </h1>
+  const BlogPage = () => {
+    const blogPosts = [
+      {
+        id: 'download-juwa-777',
+        title: 'Download Juwa 777 App: Complete Installation Guide for Android and iOS',
+        category: 'Getting Started',
+        excerpt: 'Step-by-step instructions to download and install the latest version of Juwa 777 on your Android or iOS device. Get started with over 100 exciting games today.',
+        date: 'January 7, 2025',
+        readTime: '5 min read',
+        image: '/blog imgae/download juwa now.png'
+      },
+      {
+        id: 'juwa-no-deposit-bonus',
+        title: 'Juwa 777 No Deposit Bonus: Welcome Offers and Bonus Guide',
+        category: 'Bonuses & Promotions',
+        excerpt: 'Discover how to maximize your Juwa 777 experience with welcome bonuses, reload offers, and referral rewards. Learn about wagering requirements and bonus terms.',
+        date: 'January 8, 2025',
+        readTime: '6 min read',
+        image: '/blog imgae/ultra big win with juwa.png'
+      },
+      {
+        id: 'play-juwa-online-games',
+        title: 'Play Juwa Online Games: No Download Required for Android and iOS',
+        category: 'Getting Started',
+        excerpt: 'Learn how to play Juwa games directly in your browser without downloading the app. Access casino-style games instantly on Android, iOS, and desktop devices.',
+        date: 'January 9, 2025',
+        readTime: '5 min read',
+        image: '/blog imgae/play juwa online.png'
+      },
+      {
+        id: 'juwa-777-app-troubleshooting',
+        title: 'Juwa 777 App Troubleshooting: Common Issues and Solutions',
+        category: 'Getting Started',
+        excerpt: 'Solve common installation and performance issues with the Juwa 777 app. Learn troubleshooting tips, optimization techniques, and how to get the best experience.',
+        date: 'January 10, 2025',
+        readTime: '7 min read',
+        image: '/blog imgae/boost you gaming fun with juwa.png'
+      }
+    ];
+
+    return (
+      <section className="px-6 md:px-10 py-12 bg-neutral-50 dark:bg-neutral-950">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-neutral-900 dark:text-white mb-4">Blog & Guides</h1>
+            <p className="text-lg text-neutral-600 dark:text-neutral-300">Expert tips, guides, and insights to enhance your Juwa777 gaming experience</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            {blogPosts.map((post) => (
+              <div
+                key={post.id}
+                onClick={() => {
+                  window.location.hash = `#blog-${post.id}`;
+                }}
+                className="cursor-pointer"
+              >
+              <Card 
+                className="overflow-hidden border border-neutral-200/60 dark:border-neutral-800/60 hover:shadow-lg transition-shadow duration-300 group h-full"
+              >
+                <div className="h-48 overflow-hidden bg-gradient-to-br from-red-600 via-red-700 to-red-800 flex items-center justify-center group-hover:scale-105 transition-transform duration-300 relative">
+                  <img 
+                    src={post.image || '/blog imgae/download juwa now.png'} 
+                    alt={post.title}
+                    className="w-full h-full object-cover absolute inset-0"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                    }}
+                  />
+                  {!post.image && (
+                    <Package className="h-16 w-16 text-white opacity-80 relative z-10" />
+                  )}
+        </div>
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-xs font-semibold text-red-600 dark:text-red-400">{post.category}</span>
+                    <span className="text-xs text-neutral-500">•</span>
+                    <span className="text-xs text-neutral-500">{post.readTime}</span>
+                  </div>
+                  <CardTitle className="text-xl font-bold text-neutral-900 dark:text-white mb-2 group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">
+                    {post.title}
+                  </CardTitle>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-300 mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-neutral-500">{post.date}</span>
+                    <div className="flex items-center gap-1 text-sm text-red-600 dark:text-red-400 font-medium group-hover:gap-2 transition-all">
+                      Read more <ArrowRight className="h-4 w-4" />
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              </div>
+            ))}
+        </div>
+      </div>
+    </section>
+  );
+  };
+
+  const DownloadGuideBlog = () => (
+    <section className="px-6 md:px-10 py-12 bg-neutral-50 dark:bg-neutral-950">
+      <div className="max-w-4xl mx-auto">
+        {/* Breadcrumb */}
+        <div className="mb-6 flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400">
+          <a href="#blog" className="hover:text-red-600 dark:hover:text-red-400 transition-colors">Blog</a>
+          <span>/</span>
+          <span>Download Guide</span>
+        </div>
+
+        {/* Header */}
+        <div className="mb-8">
+          <div className="inline-block px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 text-sm font-semibold rounded-full mb-4">
+            Getting Started
+          </div>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-neutral-900 dark:text-white mb-4 leading-tight">
+            Download Juwa 777 App: Complete Installation Guide for Android and iOS
+          </h1>
+          <div className="flex items-center gap-4 text-sm text-neutral-600 dark:text-neutral-400">
+            <div className="flex items-center gap-2">
+              <Clock className="h-4 w-4" />
+              <span>5 min read</span>
+            </div>
+            <span>•</span>
+            <span>January 7, 2025</span>
           </div>
         </div>
-        <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-900 dark:text-white">Latest from the Blog</h2>
-        <div className="mt-6 grid md:grid-cols-3 gap-5">
-          {['Choosing high-volatility slots','Beginner\'s guide to fish games','How sweepstakes casinos work'].map((title, i)=> (
-            <Card key={i} className="overflow-hidden border border-neutral-200/60 dark:border-neutral-800/60">
-              <div className="h-36 bg-gradient-to-br from-neutral-800 to-neutral-700" />
-              <CardContent className="p-5">
-                <div className="text-xs text-neutral-500">Casino Tips</div>
-                <CardTitle className="mt-1 text-lg">{title}</CardTitle>
-                <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Quick tips and strategies to improve your experience and understand the odds.</p>
-                <div className="mt-4 text-sm text-blue-500">Read more →</div>
+
+        {/* Hero Image */}
+        <div className="mb-8 rounded-2xl overflow-hidden">
+          <img 
+            src="/blog imgae/download juwa now.png" 
+            alt="Download Juwa 777 App"
+            className="w-full h-auto object-cover"
+            onError={(e) => {
+              e.target.style.display = 'none';
+            }}
+          />
+        </div>
+
+        {/* Introduction */}
+        <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
+          <p className="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+            Get ready to experience the ultimate social casino gaming platform with Juwa 777. This comprehensive guide will walk you through downloading and installing the latest version of the Juwa 777 application on both Android and iOS devices. Whether you're a first-time user or looking to update to the newest release, we've got you covered with detailed, step-by-step instructions.
+          </p>
+        </div>
+
+        {/* App Information Table */}
+        <Card className="mb-8 border border-neutral-200/60 dark:border-neutral-800/60">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-2">
+              <Package className="h-6 w-6 text-red-600" />
+              Application Information
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="flex items-center gap-3 p-3 bg-neutral-50 dark:bg-neutral-900/50 rounded-lg">
+                <Smartphone className="h-5 w-5 text-red-600 flex-shrink-0" />
+                <div>
+                  <div className="text-xs text-neutral-500 dark:text-neutral-400">App Name</div>
+                  <div className="font-semibold text-neutral-900 dark:text-white">Juwa 777</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 p-3 bg-neutral-50 dark:bg-neutral-900/50 rounded-lg">
+                <Settings2 className="h-5 w-5 text-red-600 flex-shrink-0" />
+                <div>
+                  <div className="text-xs text-neutral-500 dark:text-neutral-400">Version</div>
+                  <div className="font-semibold text-neutral-900 dark:text-white">v1.0.66</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 p-3 bg-neutral-50 dark:bg-neutral-900/50 rounded-lg">
+                <FileDown className="h-5 w-5 text-red-600 flex-shrink-0" />
+                <div>
+                  <div className="text-xs text-neutral-500 dark:text-neutral-400">File Size</div>
+                  <div className="font-semibold text-neutral-900 dark:text-white">69.06 MB</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 p-3 bg-neutral-50 dark:bg-neutral-900/50 rounded-lg">
+                <Shield className="h-5 w-5 text-red-600 flex-shrink-0" />
+                <div>
+                  <div className="text-xs text-neutral-500 dark:text-neutral-400">License</div>
+                  <div className="font-semibold text-neutral-900 dark:text-white">Free</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 p-3 bg-neutral-50 dark:bg-neutral-900/50 rounded-lg md:col-span-2">
+                <Smartphone className="h-5 w-5 text-red-600 flex-shrink-0" />
+                <div>
+                  <div className="text-xs text-neutral-500 dark:text-neutral-400">System Requirements</div>
+                  <div className="font-semibold text-neutral-900 dark:text-white">Android 7.0 or higher / iOS compatible</div>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Download Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3">
+            <Download className="h-8 w-8 text-red-600" />
+            Download and Installation Process
+          </h2>
+          <p className="text-neutral-700 dark:text-neutral-300 mb-6 leading-relaxed">
+            Installing Juwa 777 on your device is straightforward and secure when downloaded from our official source. Follow these detailed steps to get started with the latest version of the application.
+          </p>
+
+          {/* Step 1 */}
+          <Card className="mb-4 border-l-4 border-l-red-600 dark:border-l-red-500">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  1
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2">
+                    <FileDown className="h-5 w-5 text-red-600" />
+                    Download the APK File
+                  </h3>
+                  <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                    Click the download button provided on this page to obtain the latest version of the Juwa 777 APK file. Ensure you're downloading from our official website to guarantee you receive the authentic, verified application. The download typically takes just a few moments depending on your internet connection speed.
+                  </p>
+                  <div className="mt-4">
+                    <Button 
+                      onClick={() => window.open('https://dl.juwa777.com/', '_blank')}
+                      className="bg-red-600 hover:bg-red-700 text-white"
+                    >
+                      <Download className="h-4 w-4 mr-2" />
+                      Download Juwa 777 Now
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Step 2 */}
+          <Card className="mb-4 border-l-4 border-l-red-600 dark:border-l-red-500">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  2
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2">
+                    <Package className="h-5 w-5 text-red-600" />
+                    Locate and Initiate Installation
+                  </h3>
+                  <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                    Once the download completes, navigate to your device's Downloads folder. You'll find the APK file named something like "juwa777-v1.0.66.apk". Tap on the file to begin the installation process. Your device may prompt you with a security warning—this is normal for applications installed outside of official app stores.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Step 3 */}
+          <Card className="mb-4 border-l-4 border-l-red-600 dark:border-l-red-500">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  3
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2">
+                    <Settings2 className="h-5 w-5 text-red-600" />
+                    Enable Installation from Unknown Sources
+                  </h3>
+                  <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                    If you encounter an "Installation Blocked" message, you'll need to enable installation from unknown sources. Navigate to your device's Settings menu, then proceed to Security or Privacy settings. Locate the option labeled "Unknown Sources" or "Install Unknown Apps" and toggle it to enabled. This permission allows your device to install applications from sources other than the Google Play Store.
+                  </p>
+                  <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4 mt-4">
+                    <p className="text-sm text-yellow-800 dark:text-yellow-200">
+                      <strong>Note:</strong> This setting is a standard security feature. Only enable it when installing trusted applications from verified sources like our official website.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Step 4 */}
+          <Card className="mb-4 border-l-4 border-l-red-600 dark:border-l-red-500">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  4
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-red-600" />
+                    Complete the Installation
+                  </h3>
+                  <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                    Return to the APK file and tap it again. Follow the on-screen installation prompts, which will guide you through the final steps. The installation process typically completes within 30-60 seconds. You'll see a confirmation message once the app has been successfully installed on your device.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Step 5 */}
+          <Card className="mb-8 border-l-4 border-l-red-600 dark:border-l-red-500">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  5
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2">
+                    <Play className="h-5 w-5 text-red-600" />
+                    Launch and Start Playing
+                  </h3>
+                  <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                    After installation completes, locate the Juwa 777 app icon in your device's app drawer or home screen. Tap to launch the application. Upon first launch, you may be prompted to grant certain permissions—these are necessary for the app to function properly. Once you've completed the initial setup, you'll have access to 14+ unique games and start earning real money! Enjoy playing different games in different slots, including slots, fish shooting games, keno, and more. Start exploring and enjoy the exciting world of social casino gaming!
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* iOS Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3">
+            <Smartphone className="h-8 w-8 text-red-600" />
+            iOS Installation Instructions
+          </h2>
+          <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6">
+              <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                For iOS users, the installation process follows a similar pattern but with platform-specific considerations. Download the iOS version directly from our official website. After downloading, you may need to manually trust the application in your iPhone's Settings under General, then Device Management or Profiles & Device Management. Follow the on-screen prompts to complete the installation and begin your gaming journey.
+              </p>
+              <div className="mt-4">
+                <Button 
+                  onClick={() => window.open('https://dl.juwa777.com/', '_blank')}
+                  variant="outline"
+                  className="border-red-600 text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20"
+                >
+                  <Download className="h-4 w-4 mr-2" />
+                  Download for iOS
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Features Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6">What You Get with Juwa 777</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center">
+                    <Package className="h-6 w-6 text-red-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-neutral-900 dark:text-white mb-2">100+ Games</h3>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Access a diverse collection of slot games, fish shooting games, keno, and instant win games.</p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
-          ))}
+            <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center">
+                    <Shield className="h-6 w-6 text-red-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-neutral-900 dark:text-white mb-2">Safe & Secure</h3>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Download from our official source ensures you receive the verified, secure application.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center">
+                    <Sparkles className="h-6 w-6 text-red-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-neutral-900 dark:text-white mb-2">Regular Updates</h3>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Stay current with the latest features, games, and improvements through regular app updates.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center">
+                    <Rocket className="h-6 w-6 text-red-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-neutral-900 dark:text-white mb-2">Fast Performance</h3>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Optimized for smooth gameplay with quick loading times and responsive controls.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* Conclusion */}
+        <Card className="bg-gradient-to-r from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20 border border-red-200 dark:border-red-800">
+          <CardContent className="p-8">
+            <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-4">Conclusion</h2>
+            <p className="text-neutral-700 dark:text-neutral-300 mb-6 leading-relaxed">
+              Juwa 777 APK is an Android application that you can also get for iOS devices. It is a Juwa Game slot application where you can play different games in different slots and earn real money. The app offers over 100 exciting games including slots, fish shooting games, keno, and more. Download the latest version (v1.0.66) today and enjoy playing 14+ unique games. The installation process is quick and straightforward—follow the steps outlined above, and you'll be playing in minutes. Start your gaming journey with Juwa 777 and experience the thrill of social casino gaming!
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button 
+                onClick={() => window.open('https://dl.juwa777.com/', '_blank')}
+                className="bg-red-600 hover:bg-red-700 text-white"
+              >
+                <Download className="h-4 w-4 mr-2" />
+                Download Juwa 777 Now
+              </Button>
+              <Button 
+                onClick={() => window.location.hash = '#home'}
+                variant="outline"
+                className="border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+              >
+                Explore Games
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Back to Blog */}
+        <div className="mt-8 text-center">
+          <a 
+            href="#blog" 
+            className="inline-flex items-center gap-2 text-red-600 dark:text-red-400 hover:gap-3 transition-all font-medium"
+          >
+            <ArrowRight className="h-4 w-4 rotate-180" />
+            Back to Blog
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+
+  const NoDepositBonusBlog = () => (
+    <section className="px-6 md:px-10 py-12 bg-neutral-50 dark:bg-neutral-950">
+      <div className="max-w-4xl mx-auto">
+        {/* Breadcrumb */}
+        <div className="mb-6 flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400">
+          <a href="#blog" className="hover:text-red-600 dark:hover:text-red-400 transition-colors">Blog</a>
+          <span>/</span>
+          <span>Bonuses & Promotions</span>
+        </div>
+
+        {/* Header */}
+        <div className="mb-8">
+          <div className="inline-block px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 text-sm font-semibold rounded-full mb-4">
+            Bonuses & Promotions
+          </div>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-neutral-900 dark:text-white mb-4 leading-tight">
+            Juwa 777 No Deposit Bonus: Welcome Offers and Bonus Guide
+          </h1>
+          <div className="flex items-center gap-4 text-sm text-neutral-600 dark:text-neutral-400">
+            <div className="flex items-center gap-2">
+              <Clock className="h-4 w-4" />
+              <span>6 min read</span>
+            </div>
+            <span>•</span>
+            <span>January 8, 2025</span>
+          </div>
+        </div>
+
+        {/* Hero Image */}
+        <div className="mb-8 rounded-2xl overflow-hidden">
+          <img 
+            src="/blog imgae/ultra big win with juwa.png" 
+            alt="Juwa 777 Bonuses and Big Wins"
+            className="w-full h-auto object-cover"
+            onError={(e) => {
+              e.target.style.display = 'none';
+            }}
+          />
+        </div>
+
+        {/* Introduction */}
+        <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
+          <p className="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+            Juwa 777 offers generous bonus opportunities designed to enhance your gaming experience and maximize your bankroll. Whether you're a new player looking to get started or a returning member seeking additional value, understanding the available bonuses and their terms is essential for making the most of your gameplay. This comprehensive guide covers all the bonus offers, how they work, and what you need to know about wagering requirements.
+          </p>
+        </div>
+
+        {/* Welcome Bonus Section */}
+        <div className="mb-8">
+          <Card className="border-l-4 border-l-red-600 dark:border-l-red-500 bg-gradient-to-r from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center">
+                  <Gift className="h-6 w-6" />
+                </div>
+                <div className="flex-1">
+                  <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-3">
+                    200% Welcome Bonus - Up to $500
+                  </h2>
+                  <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                    New players at Juwa 777 are greeted with an exceptional welcome offer: a 200% match bonus on your first deposit, with a maximum bonus amount of $500. This means when you make your initial deposit, Juwa 777 will match it by 200%, significantly boosting your starting bankroll.
+                  </p>
+                  <div className="bg-white dark:bg-neutral-800 rounded-lg p-4 mt-4">
+                    <p className="text-sm text-neutral-700 dark:text-neutral-300">
+                      <strong className="text-red-600 dark:text-red-400">Example:</strong> If you deposit $100, you'll receive an additional $200 in bonus credits, giving you a total of $300 to play with. Deposit $250 or more, and you'll receive the maximum $500 bonus.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Reload Bonus Section */}
+        <div className="mb-8">
+          <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center">
+                  <DollarSign className="h-6 w-6 text-orange-600 dark:text-orange-400" />
+                </div>
+                <div className="flex-1">
+                  <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-3">
+                    50% Reload Bonus on Every Deposit
+                  </h2>
+                  <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                    Returning players aren't left out of the bonus action. Juwa 777 offers a 50% reload bonus on every subsequent deposit you make after your initial welcome bonus. This ongoing promotion ensures that your bankroll continues to grow with each deposit, providing sustained value throughout your gaming journey.
+                  </p>
+                  <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-lg p-4 mt-4">
+                    <p className="text-sm text-neutral-700 dark:text-neutral-300">
+                      <strong className="text-orange-600 dark:text-orange-400">Example:</strong> If you deposit $100 on your second or subsequent deposit, you'll receive an extra $50 in bonus credits, bringing your total playable balance to $150.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Referral Bonus Section */}
+        <div className="mb-8">
+          <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+                  <Users className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                </div>
+                <div className="flex-1">
+                  <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-3">
+                    $5 Referral Bonus Program
+                  </h2>
+                  <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                    Juwa 777 rewards you for sharing the platform with friends through their referral bonus program. For each friend you refer who makes an initial deposit of $20 or more, you'll receive $5 in free casino credits. This program allows you to earn bonus funds simply by introducing others to the Juwa 777 experience.
+                  </p>
+                  <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mt-4">
+                    <p className="text-sm text-blue-800 dark:text-blue-200">
+                      <strong>How it works:</strong> Share your referral link with friends. When they sign up and make their first deposit of $20 or more, both you and your friend benefit from the referral bonus.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Wagering Requirements Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3">
+            <Info className="h-8 w-8 text-red-600" />
+            Understanding Wagering Requirements
+          </h2>
+          <p className="text-neutral-700 dark:text-neutral-300 mb-6 leading-relaxed">
+            Before you can withdraw any winnings derived from bonus funds, you must meet the wagering requirements. These requirements ensure fair play and prevent bonus abuse while still providing significant value to players.
+          </p>
+
+          <Card className="mb-4 border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-4 flex items-center gap-2">
+                <Percent className="h-5 w-5 text-red-600" />
+                200% Welcome Bonus Wagering Requirements
+              </h3>
+              <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                For the 200% Welcome Bonus, the wagering requirement is set at 20 times the combined total of your deposit and bonus amount. This means you need to wager the total amount (deposit + bonus) 20 times before you can withdraw any winnings from the bonus funds.
+              </p>
+              <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
+                <p className="text-sm text-yellow-800 dark:text-yellow-200 mb-2">
+                  <strong>Example Calculation:</strong>
+                </p>
+                <ul className="text-sm text-yellow-800 dark:text-yellow-200 space-y-1 list-disc list-inside">
+                  <li>You deposit $100 and receive a $200 bonus</li>
+                  <li>Total amount subject to wagering: $300 ($100 + $200)</li>
+                  <li>Wagering requirement: $300 × 20 = $6,000</li>
+                  <li>You must wager at least $6,000 before withdrawing bonus winnings</li>
+                </ul>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="mb-4 border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-4">
+                Important Notes About Wagering
+              </h3>
+              <ul className="space-y-3 text-neutral-700 dark:text-neutral-300">
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
+                  <span>Only bonus winnings are subject to wagering requirements. Your original deposit can typically be withdrawn according to standard withdrawal terms.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
+                  <span>Different games may contribute differently to wagering requirements. Check the terms for specific game contributions.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
+                  <span>Wagering requirements must be completed within the specified time frame, typically 30 days from bonus receipt.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <AlertCircle className="h-5 w-5 text-orange-600 dark:text-orange-400 flex-shrink-0 mt-0.5" />
+                  <span>Failure to meet wagering requirements within the time limit may result in forfeiture of bonus funds and associated winnings.</span>
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Eligibility Section */}
+        <div className="mb-8">
+          <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-4 flex items-center gap-2">
+                <Shield className="h-6 w-6 text-red-600" />
+                Bonus Eligibility and Availability
+              </h2>
+              <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                Juwa 777's bonus promotions are available to players in all 50 U.S. states, making these offers accessible to a wide range of players across the country. The platform is designed to comply with sweepstakes laws, ensuring that players can enjoy these bonuses regardless of their location within the United States.
+              </p>
+              <div className="grid md:grid-cols-2 gap-4 mt-4">
+                <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-lg p-4">
+                  <div className="font-semibold text-neutral-900 dark:text-white mb-2">Available To</div>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-300">Players in all 50 U.S. states</p>
+                </div>
+                <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-lg p-4">
+                  <div className="font-semibold text-neutral-900 dark:text-white mb-2">Bonus Type</div>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-300">Deposit-based bonuses with wagering requirements</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* How to Claim Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6">How to Claim Your Bonuses</h2>
+          <div className="space-y-4">
+            <Card className="border-l-4 border-l-red-600 dark:border-l-red-500">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                    1
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-2">Sign Up for an Account</h3>
+                    <p className="text-neutral-700 dark:text-neutral-300">Create your Juwa 777 account through the official platform. Ensure you provide accurate information during registration.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-red-600 dark:border-l-red-500">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                    2
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-2">Make Your First Deposit</h3>
+                    <p className="text-neutral-700 dark:text-neutral-300">Complete your first deposit to automatically receive the 200% welcome bonus. The bonus is typically credited immediately or within a few minutes.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-red-600 dark:border-l-red-500">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                    3
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-2">Start Playing</h3>
+                    <p className="text-neutral-700 dark:text-neutral-300">Use your bonus funds to explore Juwa 777's extensive game library. Remember to meet wagering requirements before withdrawing winnings.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* Conclusion */}
+        <Card className="bg-gradient-to-r from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20 border border-red-200 dark:border-red-800">
+          <CardContent className="p-8">
+            <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-4">Maximize Your Juwa 777 Experience</h2>
+            <p className="text-neutral-700 dark:text-neutral-300 mb-6 leading-relaxed">
+              Juwa 777's bonus structure is designed to provide exceptional value to both new and returning players. The 200% welcome bonus offers an excellent starting boost, while the 50% reload bonus ensures ongoing value with every deposit. Combined with the referral program, these bonuses create multiple opportunities to enhance your bankroll and extend your gameplay. Remember to review all terms and conditions, understand the wagering requirements, and play responsibly. With these bonuses, you can explore more games, take more chances, and potentially increase your winnings while enjoying the exciting world of social casino gaming at Juwa 777.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button 
+                onClick={() => window.open('https://www.facebook.com/people/Fortune-JUWA/61565056061906/?mibextid=wwXIfr&rdid=903GVl4fnaFYCKne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JNy4sFfi2%2F%3Fmibextid%3DwwXIfr', '_blank')}
+                className="bg-red-600 hover:bg-red-700 text-white"
+              >
+                <Gift className="h-4 w-4 mr-2" />
+                Claim Your Bonus
+              </Button>
+              <Button 
+                onClick={() => window.location.hash = '#blog'}
+                variant="outline"
+                className="border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+              >
+                Back to Blog
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Back to Blog */}
+        <div className="mt-8 text-center">
+          <a 
+            href="#blog" 
+            className="inline-flex items-center gap-2 text-red-600 dark:text-red-400 hover:gap-3 transition-all font-medium"
+          >
+            <ArrowRight className="h-4 w-4 rotate-180" />
+            Back to Blog
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+
+  const PlayJuwaOnlineBlog = () => (
+    <section className="px-6 md:px-10 py-12 bg-neutral-50 dark:bg-neutral-950">
+      <div className="max-w-4xl mx-auto">
+        {/* Breadcrumb */}
+        <div className="mb-6 flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400">
+          <a href="#blog" className="hover:text-red-600 dark:hover:text-red-400 transition-colors">Blog</a>
+          <span>/</span>
+          <span>Getting Started</span>
+        </div>
+
+        {/* Header */}
+        <div className="mb-8">
+          <div className="inline-block px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 text-sm font-semibold rounded-full mb-4">
+            Getting Started
+          </div>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-neutral-900 dark:text-white mb-4 leading-tight">
+            Play Juwa Online Games: No Download Required for Android and iOS
+          </h1>
+          <div className="flex items-center gap-4 text-sm text-neutral-600 dark:text-neutral-400">
+            <div className="flex items-center gap-2">
+              <Clock className="h-4 w-4" />
+              <span>5 min read</span>
+            </div>
+            <span>•</span>
+            <span>January 9, 2025</span>
+          </div>
+        </div>
+
+        {/* Hero Image */}
+        <div className="mb-8 rounded-2xl overflow-hidden">
+          <img 
+            src="/blog imgae/play juwa online.png" 
+            alt="Play Juwa Online Games"
+            className="w-full h-auto object-cover"
+            onError={(e) => {
+              e.target.style.display = 'none';
+            }}
+          />
+        </div>
+
+        {/* Introduction */}
+        <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
+          <Card className="bg-gradient-to-r from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 border border-green-200 dark:border-green-800 mb-6">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-bold text-lg text-neutral-900 dark:text-white mb-2">No Download Required!</h3>
+                  <p className="text-neutral-700 dark:text-neutral-300">
+                    Play Juwa games directly in your web browser on both Android and iOS devices. No app installation needed—just open your browser and start playing instantly!
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          <p className="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+            Looking to play Juwa games online without downloading a mobile app? You've come to the right place! Juwa online offers exciting casino-style games that can be played directly in your web browser on Android and iOS devices—absolutely no download or installation required. This instant access gives you the thrill of an online casino right at your fingertips, without taking up valuable storage space on your device. In this comprehensive guide, we'll show you how to play Juwa online without any downloads and explore all the features that make Juwa 777 a top choice for online gaming.
+          </p>
+        </div>
+
+        {/* What is Juwa Section */}
+        <div className="mb-8">
+          <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-4 flex items-center gap-2">
+                <Gamepad2 className="h-6 w-6 text-red-600" />
+                What is Juwa?
+              </h2>
+              <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                Juwa is an online gaming platform that offers a diverse variety of casino-style games, including slots, card games, fish shooting games, and keno. The platform allows you to play for entertainment or real money rewards through sweepstakes entries. Juwa has gained significant popularity in the USA due to its easy access, exciting gameplay, and the convenience of playing directly in your browser without requiring app installations.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* How to Play Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3">
+            <Play className="h-8 w-8 text-red-600" />
+            How to Play Juwa Online Games (No Download Required)
+          </h2>
+          <p className="text-neutral-700 dark:text-neutral-300 mb-6 leading-relaxed">
+            Ready to start playing? You can easily access Juwa online games directly in your browser—no app download or installation needed for Android or iOS devices. The process is straightforward and takes just a few minutes to get started. Simply use your web browser to access the games instantly.
+          </p>
+
+          {/* Step 1 */}
+          <Card className="mb-4 border-l-4 border-l-red-600 dark:border-l-red-500">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  1
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2">
+                    <Globe className="h-5 w-5 text-red-600" />
+                    Visit the Juwa Website
+                  </h3>
+                  <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                    Open your web browser on any Android or iOS device and navigate to the official Juwa website. You can search for "Juwa play online" or visit the platform directly. This will take you to the Juwa online platform where you can start playing immediately without any downloads.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Step 2 */}
+          <Card className="mb-4 border-l-4 border-l-red-600 dark:border-l-red-500">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  2
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2">
+                    <LogIn className="h-5 w-5 text-red-600" />
+                    Create an Account or Log In
+                  </h3>
+                  <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                    To access the games, you'll need to sign up for a new account or log in using your existing Juwa credentials. The registration process is simple and takes only a few minutes. If you already have a Juwa account, simply enter your username and password to access your dashboard.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Step 3 */}
+          <Card className="mb-8 border-l-4 border-l-red-600 dark:border-l-red-500">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  3
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2">
+                    <Gamepad2 className="h-5 w-5 text-red-600" />
+                    Choose Your Game and Start Playing
+                  </h3>
+                  <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                    Once logged in, you can browse through the extensive variety of games available on the platform. From slots to card games, fish shooting games to keno, there's something for every type of player. Simply select your preferred game and start playing instantly—no lengthy downloads required, just login and play.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Juwa 777 Online Casino Login Section */}
+        <div className="mb-8">
+          <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-4 flex items-center gap-2">
+                <LogIn className="h-6 w-6 text-red-600" />
+                Juwa 777 Online Casino Login
+              </h2>
+              <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                For users who enjoy playing at online casinos, Juwa 777 is an excellent option that offers a wide range of casino games including slot machines, blackjack, poker, fish shooting games, and keno. To get started, you simply need to log into the Juwa 777 online casino using your existing credentials.
+              </p>
+              
+              <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-lg p-4 mt-4">
+                <h3 className="font-semibold text-neutral-900 dark:text-white mb-3">Steps to Log In:</h3>
+                <ol className="space-y-2 text-sm text-neutral-700 dark:text-neutral-300 list-decimal list-inside">
+                  <li>Navigate to the official Juwa777 website or mobile site</li>
+                  <li>Click on the Juwa 777 online casino login button</li>
+                  <li>Enter your username and password</li>
+                  <li>You're now ready to explore all the games Juwa 777 has to offer</li>
+                </ol>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Why Play Juwa Online Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6">Why Play Juwa Online?</h2>
+          <p className="text-neutral-700 dark:text-neutral-300 mb-6 leading-relaxed">
+            There are numerous compelling reasons why Juwa is an excellent choice for online gamers. Here are some of the key advantages that make playing Juwa online a great experience:
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center">
+                    <Globe className="h-6 w-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-neutral-900 dark:text-white mb-2">No Download Needed for iOS or Android</h3>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Play directly in your web browser on both Android and iOS devices—no app installation required. Enjoy your favorite games without filling up your device's storage. This also saves your data and bandwidth, making it perfect for quick gaming sessions.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
+                    <Smartphone className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-neutral-900 dark:text-white mb-2">Works on Android and iOS Without App Download</h3>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Play Juwa directly in your browser on both Android and iOS devices—no app download or installation needed. The online version is available for all operating systems through your web browser, ensuring universal access without any downloads.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center">
+                    <LogIn className="h-6 w-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-neutral-900 dark:text-white mb-2">Easy Login</h3>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Use your Juwa login for instant access to games. Once you log in, you'll have access to all the games in your dashboard immediately.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center">
+                    <Gamepad2 className="h-6 w-6 text-orange-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-neutral-900 dark:text-white mb-2">Variety of Games</h3>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Juwa offers an exciting mix of games, from slots to casino classics. These games may have hardware restrictions on mid-range devices, so playing online saves your device resources.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* Safety Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3">
+            <Shield className="h-8 w-8 text-red-600" />
+            How to Stay Safe While Playing Juwa Online
+          </h2>
+          <p className="text-neutral-700 dark:text-neutral-300 mb-6 leading-relaxed">
+            When playing online games like Juwa, it's essential to prioritize your safety and security. Follow these important guidelines to ensure a safe and enjoyable gaming experience:
+          </p>
+
+          <Card className="mb-4 border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center">
+                  <Lock className="h-6 w-6 text-red-600" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3">Use a Secure Login</h3>
+                  <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                    Always log in from the official Juwa website to protect your account. Never enter your credentials on third-party sites or suspicious links. Ensure you're visiting the legitimate Juwa platform before entering any login information.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="mb-4 border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center">
+                  <ShieldCheck className="h-6 w-6 text-orange-600" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3">Play Responsibly</h3>
+                  <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                    Set limits for yourself and play for entertainment to avoid any risks associated with gambling. Establish time and spending limits before you start playing, and stick to them. Remember that gaming should be fun and enjoyable, not a source of stress or financial strain.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="mb-8 border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
+                  <Wifi className="h-6 w-6 text-blue-600" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3">Monitor Your Internet Connection</h3>
+                  <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                    Ensure you're on a secure and reliable network when playing online. Avoid using public Wi-Fi networks for gaming sessions that involve account access or financial transactions. A stable internet connection also ensures smooth gameplay without interruptions.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Conclusion */}
+        <Card className="bg-gradient-to-r from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20 border border-red-200 dark:border-red-800">
+          <CardContent className="p-8">
+            <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-4">Conclusion</h2>
+            <p className="text-neutral-700 dark:text-neutral-300 mb-6 leading-relaxed">
+              Playing Juwa online without downloading any app is the perfect way to enjoy top-notch casino games on the go. Whether you're using an Android or iOS device, you can access all Juwa games directly through your web browser—no app download or installation required. Whether you're looking for a quick gaming session during your break or want to dive into more extended gameplay, Juwa offers it all for Android and iOS users without requiring any downloads. The convenience of instant browser access, combined with the wide variety of games and the security of playing through your browser, makes Juwa online an excellent choice for both casual and serious gamers. Just log in with your Juwa account through your browser, and you're ready to play your favorite games instantly, anywhere, anytime—no app needed!
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button 
+                onClick={() => window.open('https://www.facebook.com/people/Fortune-JUWA/61565056061906/?mibextid=wwXIfr&rdid=903GVl4fnaFYCKne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JNy4sFfi2%2F%3Fmibextid%3DwwXIfr', '_blank')}
+                className="bg-red-600 hover:bg-red-700 text-white"
+              >
+                <Play className="h-4 w-4 mr-2" />
+                Play Juwa Online Now
+              </Button>
+              <Button 
+                onClick={() => window.location.hash = '#blog'}
+                variant="outline"
+                className="border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+              >
+                Back to Blog
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Back to Blog */}
+        <div className="mt-8 text-center">
+          <a 
+            href="#blog" 
+            className="inline-flex items-center gap-2 text-red-600 dark:text-red-400 hover:gap-3 transition-all font-medium"
+          >
+            <ArrowRight className="h-4 w-4 rotate-180" />
+            Back to Blog
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+
+  const TroubleshootingBlog = () => (
+    <section className="px-6 md:px-10 py-12 bg-neutral-50 dark:bg-neutral-950">
+      <div className="max-w-4xl mx-auto">
+        {/* Breadcrumb */}
+        <div className="mb-6 flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400">
+          <a href="#blog" className="hover:text-red-600 dark:hover:text-red-400 transition-colors">Blog</a>
+          <span>/</span>
+          <span>Getting Started</span>
+        </div>
+
+        {/* Header */}
+        <div className="mb-8">
+          <div className="inline-block px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 text-sm font-semibold rounded-full mb-4">
+            Getting Started
+          </div>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-neutral-900 dark:text-white mb-4 leading-tight">
+            Juwa 777 App Troubleshooting: Common Issues and Solutions
+          </h1>
+          <div className="flex items-center gap-4 text-sm text-neutral-600 dark:text-neutral-400">
+            <div className="flex items-center gap-2">
+              <Clock className="h-4 w-4" />
+              <span>7 min read</span>
+            </div>
+            <span>•</span>
+            <span>January 10, 2025</span>
+          </div>
+        </div>
+
+        {/* Hero Image */}
+        <div className="mb-8 rounded-2xl overflow-hidden">
+          <img 
+            src="/blog imgae/boost you gaming fun with juwa.png" 
+            alt="Boost Your Gaming Fun with Juwa"
+            className="w-full h-auto object-cover"
+            onError={(e) => {
+              e.target.style.display = 'none';
+            }}
+          />
+        </div>
+
+        {/* Introduction */}
+        <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
+          <p className="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+            After successfully downloading and installing the Juwa 777 app (v1.0.66), you may encounter some common issues or want to optimize your experience for the best performance. This comprehensive troubleshooting guide covers the most frequent problems users face, along with proven solutions and optimization tips to ensure smooth gameplay and maximum enjoyment of your Juwa 777 experience.
+          </p>
+        </div>
+
+        {/* Installation Issues Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3">
+            <HelpCircle className="h-8 w-8 text-red-600" />
+            Common Installation Issues
+          </h2>
+
+          <Card className="mb-4 border-l-4 border-l-red-600 dark:border-l-red-500">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2">
+                <AlertCircle className="h-5 w-5 text-red-600" />
+                "Installation Blocked" Error
+              </h3>
+              <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                If you see an "Installation Blocked" message when trying to install the APK file, your device's security settings are preventing installations from unknown sources.
+              </p>
+              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+                <p className="text-sm text-blue-800 dark:text-blue-200 font-semibold mb-2">Solution:</p>
+                <ol className="text-sm text-blue-800 dark:text-blue-200 space-y-1 list-decimal list-inside">
+                  <li>Go to your device's Settings menu</li>
+                  <li>Navigate to Security or Privacy settings</li>
+                  <li>Find and enable "Unknown Sources" or "Install Unknown Apps"</li>
+                  <li>Select your browser or file manager and toggle the permission on</li>
+                  <li>Return to the APK file and try installing again</li>
+                </ol>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="mb-4 border-l-4 border-l-orange-600 dark:border-l-orange-500">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2">
+                <AlertCircle className="h-5 w-5 text-orange-600" />
+                "App Not Installed" Error
+              </h3>
+              <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                This error typically occurs when there's insufficient storage space, a corrupted download, or an incompatible Android version.
+              </p>
+              <div className="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-lg p-4">
+                <p className="text-sm text-orange-800 dark:text-orange-200 font-semibold mb-2">Solutions:</p>
+                <ul className="text-sm text-orange-800 dark:text-orange-200 space-y-1 list-disc list-inside">
+                  <li>Check available storage space (app requires at least 100MB free)</li>
+                  <li>Verify your Android version is 7.0 or higher</li>
+                  <li>Delete the corrupted APK and download a fresh copy from the official source</li>
+                  <li>Clear your device's cache and try again</li>
+                  <li>Restart your device and attempt installation once more</li>
+                </ul>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="mb-8 border-l-4 border-l-yellow-600 dark:border-l-yellow-500">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2">
+                <AlertCircle className="h-5 w-5 text-yellow-600" />
+                iOS Installation Issues
+              </h3>
+              <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                iOS users may need to manually trust the application after installation before it can be opened.
+              </p>
+              <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
+                <p className="text-sm text-yellow-800 dark:text-yellow-200 font-semibold mb-2">Solution:</p>
+                <ol className="text-sm text-yellow-800 dark:text-yellow-200 space-y-1 list-decimal list-inside">
+                  <li>After installation, go to iPhone Settings</li>
+                  <li>Navigate to General, then Device Management or Profiles & Device Management</li>
+                  <li>Find the Juwa 777 developer profile</li>
+                  <li>Tap "Trust [Developer Name]" and confirm</li>
+                  <li>Return to your home screen and open the Juwa 777 app</li>
+                </ol>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Performance Issues Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3">
+            <Zap className="h-8 w-8 text-red-600" />
+            Performance and Optimization
+          </h2>
+
+          <Card className="mb-4 border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2">
+                <Battery className="h-5 w-5 text-red-600" />
+                App Running Slowly or Lagging
+              </h3>
+              <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                If the app is running slowly or experiencing lag, there are several optimization steps you can take to improve performance.
+              </p>
+              <div className="grid md:grid-cols-2 gap-4 mt-4">
+                <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-lg p-4">
+                  <div className="font-semibold text-neutral-900 dark:text-white mb-2 flex items-center gap-2">
+                    <RefreshCw className="h-4 w-4 text-red-600" />
+                    Quick Fixes
+                  </div>
+                  <ul className="text-sm text-neutral-600 dark:text-neutral-300 space-y-1 list-disc list-inside">
+                    <li>Close other running apps</li>
+                    <li>Restart the Juwa 777 app</li>
+                    <li>Clear app cache from device settings</li>
+                    <li>Restart your device</li>
+                  </ul>
+                </div>
+                <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-lg p-4">
+                  <div className="font-semibold text-neutral-900 dark:text-white mb-2 flex items-center gap-2">
+                    <Settings2 className="h-4 w-4 text-red-600" />
+                    Advanced Tips
+                  </div>
+                  <ul className="text-sm text-neutral-600 dark:text-neutral-300 space-y-1 list-disc list-inside">
+                    <li>Free up device storage space</li>
+                    <li>Update to the latest app version</li>
+                    <li>Check internet connection stability</li>
+                    <li>Disable battery optimization for the app</li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="mb-4 border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2">
+                <Wifi className="h-5 w-5 text-red-600" />
+                Connection Issues
+              </h3>
+              <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                Network connectivity problems can prevent the app from loading games or connecting to servers.
+              </p>
+              <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+                <p className="text-sm text-green-800 dark:text-green-200 font-semibold mb-2">Troubleshooting Steps:</p>
+                <ol className="text-sm text-green-800 dark:text-green-200 space-y-1 list-decimal list-inside">
+                  <li>Check your internet connection (Wi-Fi or mobile data)</li>
+                  <li>Switch between Wi-Fi and mobile data to test</li>
+                  <li>Restart your router if using Wi-Fi</li>
+                  <li>Check if other apps can connect to the internet</li>
+                  <li>Disable VPN if active, as it may interfere with connections</li>
+                  <li>Clear app data and log in again</li>
+                </ol>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="mb-8 border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2">
+                <Smartphone className="h-5 w-5 text-red-600" />
+                High Battery Consumption
+              </h3>
+              <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                Gaming apps can be battery-intensive. Here's how to optimize battery usage while playing Juwa 777.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <div className="font-semibold text-neutral-900 dark:text-white">Reduce Screen Brightness</div>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Lower your device's screen brightness to conserve battery during extended gaming sessions.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <div className="font-semibold text-neutral-900 dark:text-white">Close Background Apps</div>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Close unnecessary apps running in the background to free up system resources.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <div className="font-semibold text-neutral-900 dark:text-white">Use Power Saving Mode</div>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Enable your device's power saving mode for longer battery life during gameplay.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <div className="font-semibold text-neutral-900 dark:text-white">Keep App Updated</div>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Always use the latest version (currently v1.0.66) which includes performance optimizations.</p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* App Features and Tips Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3">
+            <Star className="h-8 w-8 text-red-600" />
+            Getting the Most Out of Juwa 777
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center">
+                    <Gamepad2 className="h-6 w-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-neutral-900 dark:text-white mb-2">Explore All Games</h3>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Juwa 777 offers 14+ unique games. Take time to explore slots, fish games, keno, and more to find your favorites.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
+                    <Gift className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-neutral-900 dark:text-white mb-2">Claim Bonuses</h3>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Take advantage of welcome bonuses, reload bonuses, and referral rewards to maximize your bankroll.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center">
+                    <Shield className="h-6 w-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-neutral-900 dark:text-white mb-2">Secure Your Account</h3>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Use a strong password and enable two-factor authentication if available to protect your account.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center">
+                    <RefreshCw className="h-6 w-6 text-orange-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-neutral-900 dark:text-white mb-2">Regular Updates</h3>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Keep the app updated to the latest version to access new features, games, and performance improvements.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* Maintenance Tips Section */}
+        <div className="mb-8">
+          <Card className="border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-4 flex items-center gap-2">
+                <Settings2 className="h-6 w-6 text-red-600" />
+                Regular Maintenance Tips
+              </h2>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Trash2 className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <div className="font-semibold text-neutral-900 dark:text-white">Clear Cache Regularly</div>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Clear the app cache from your device settings every few weeks to free up space and improve performance.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Package className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <div className="font-semibold text-neutral-900 dark:text-white">Monitor Storage Space</div>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Ensure you have at least 100MB of free storage to allow the app to function properly and receive updates.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <ShieldCheck className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <div className="font-semibold text-neutral-900 dark:text-white">Check for Updates</div>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Regularly check for app updates to ensure you have the latest version with bug fixes and new features.</p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Conclusion */}
+        <Card className="bg-gradient-to-r from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20 border border-red-200 dark:border-red-800">
+          <CardContent className="p-8">
+            <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-4">Troubleshooting Success</h2>
+            <p className="text-neutral-700 dark:text-neutral-300 mb-6 leading-relaxed">
+              Most issues with the Juwa 777 app can be resolved by following the troubleshooting steps outlined in this guide. Whether you're dealing with installation problems, performance issues, or connection difficulties, the solutions provided here should help you get back to enjoying your favorite games. Remember to keep your app updated, maintain adequate storage space, and follow best practices for optimal performance. If problems persist after trying these solutions, consider reaching out to Juwa 777 customer support for additional assistance. With proper maintenance and optimization, you'll be able to enjoy all 14+ unique games and start earning real money with a smooth, trouble-free experience.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button 
+                onClick={() => window.open('https://dl.juwa777.com/', '_blank')}
+                className="bg-red-600 hover:bg-red-700 text-white"
+              >
+                <Download className="h-4 w-4 mr-2" />
+                Download Latest Version
+              </Button>
+              <Button 
+                onClick={() => window.location.hash = '#contact'}
+                variant="outline"
+                className="border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+              >
+                <HelpCircle className="h-4 w-4 mr-2" />
+                Contact Support
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Back to Blog */}
+        <div className="mt-8 text-center">
+          <a 
+            href="#blog" 
+            className="inline-flex items-center gap-2 text-red-600 dark:text-red-400 hover:gap-3 transition-all font-medium"
+          >
+            <ArrowRight className="h-4 w-4 rotate-180" />
+            Back to Blog
+          </a>
         </div>
       </div>
     </section>
@@ -1046,6 +2472,10 @@ export default function WebsiteLiveStarter() {
             {route === 'games' && <GamesPage />}
             {route === 'about' && <AboutPage />}
             {route === 'blog' && <BlogPage />}
+            {route === 'blog-download-juwa-777' && <DownloadGuideBlog />}
+            {route === 'blog-juwa-no-deposit-bonus' && <NoDepositBonusBlog />}
+            {route === 'blog-play-juwa-online-games' && <PlayJuwaOnlineBlog />}
+            {route === 'blog-juwa-777-app-troubleshooting' && <TroubleshootingBlog />}
             {route === 'contact' && <ContactPage />}
             {route === 'faq' && <FAQPage />}
 
