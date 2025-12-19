@@ -70,3 +70,6 @@ After implementing:
 
 The redirect configuration file is ready: `juwa/nginx-redirect.conf`
 
+
+
+

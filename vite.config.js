@@ -9,6 +9,11 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     }
   },
+  server: {
+    host: '0.0.0.0', // Listen on all network interfaces
+    port: 5173,
+    strictPort: false
+  },
   base: '/', // Change this to '/JuwaCasino/' if your repo is not using a custom domain
   build: {
     outDir: 'dist',

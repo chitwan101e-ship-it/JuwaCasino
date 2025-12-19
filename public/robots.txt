@@ -2,9 +2,12 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://juwagame.com/sitemap.xml
+Sitemap: https://juwa777.com/sitemap.xml
 
 # Disallow admin and private areas (if any)
 Disallow: /api/
 Disallow: /admin/
+
+
+
 

@@ -64,7 +64,7 @@ export default function WebsiteLiveStarter() {
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white">{tagline}</h1>
           <p className="mt-4 text-neutral-300 text-base md:text-lg">{heroDesc}</p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Button style={{ background: playNowColor, borderColor: playNowColor }} className="text-white hover:opacity-90" onClick={() => window.open('https://www.facebook.com/people/Fortune-JUWA/61565056061906/?mibextid=wwXIfr&rdid=903GVl4fnaFYCKne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JNy4sFfi2%2F%3Fmibextid%3DwwXIfr', '_blank')}>
+            <Button style={{ background: playNowColor, borderColor: playNowColor }} className="text-white hover:opacity-90" onClick={() => window.open('https://www.facebook.com/share/17aBWNSxLD/?mibextid=wwXIfr', '_blank')}>
               <Sparkles className="h-4 w-4 mr-2" /> Play Now
             </Button>
             <Button variant="outline" className="border-white/30 text-white hover:bg-white/10" onClick={() => window.open('https://dl.juwa777.com/', '_blank')}>Download Juwa Now</Button>
@@ -84,7 +84,7 @@ export default function WebsiteLiveStarter() {
             <div className="text-base opacity-90">1st Deposit Offer</div>
             <div className="mt-2 font-extrabold text-white leading-[1.1] tracking-tight [text-wrap:balance]" style={{fontSize:'clamp(28px,4.5vw,40px)'}} dangerouslySetInnerHTML={{ __html: '100% Welcome<br/>Bonus' }}></div>
             <div className="mt-6">
-              <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/people/Fortune-JUWA/61565056061906/?mibextid=wwXIfr&rdid=903GVl4fnaFYCKne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JNy4sFfi2%2F%3Fmibextid%3DwwXIfr', '_blank')}>Join Now</Button>
+              <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/juwaloot', '_blank')}>Join Now</Button>
             </div>
           </div>
 
@@ -97,7 +97,7 @@ export default function WebsiteLiveStarter() {
             <div className="text-base opacity-90">2nd Deposit Offer</div>
             <div className="mt-2 font-extrabold text-white leading-[1.1] tracking-tight [text-wrap:balance]" style={{fontSize:'clamp(28px,4.5vw,40px)'}}>50% Reload Bonus</div>
             <div className="mt-6">
-              <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/people/Fortune-JUWA/61565056061906/?mibextid=wwXIfr&rdid=903GVl4fnaFYCKne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JNy4sFfi2%2F%3Fmibextid%3DwwXIfr', '_blank')}>Join Now</Button>
+              <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/JuwaJackpots/', '_blank')}>Join Now</Button>
             </div>
           </div>
 
@@ -110,7 +110,7 @@ export default function WebsiteLiveStarter() {
             <div className="text-base opacity-90">Play together and enjoy</div>
             <div className="mt-2 font-extrabold text-white leading-[1.1] tracking-tight [text-wrap:balance]" style={{fontSize:'clamp(28px,4.5vw,40px)'}}>$5 Referral Bonus</div>
             <div className="mt-6">
-              <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/people/Fortune-JUWA/61565056061906/?mibextid=wwXIfr&rdid=903GVl4fnaFYCKne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JNy4sFfi2%2F%3Fmibextid%3DwwXIfr', '_blank')}>Join Now</Button>
+              <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/juwaloot', '_blank')}>Join Now</Button>
             </div>
           </div>
         </div>
@@ -181,7 +181,18 @@ export default function WebsiteLiveStarter() {
                         <div className="mt-2 font-extrabold text-white leading-[1.1] tracking-tight [text-wrap:balance]" style={{fontSize:'clamp(28px,4.5vw,40px)'}} dangerouslySetInnerHTML={{ __html: banner.title }}></div>
                         {banner.desc && <div className="mt-3 text-sm opacity-90">{banner.desc}</div>}
                         <div className="mt-6">
-                          <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('https://www.facebook.com/people/Fortune-JUWA/61565056061906/?mibextid=wwXIfr&rdid=903GVl4fnaFYCKne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JNy4sFfi2%2F%3Fmibextid%3DwwXIfr', '_blank')}>Join Now</Button>
+                          <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => {
+                            if (index === 0) {
+                              // 1st Deposit Offer - Juwa Loot
+                              window.open('https://www.facebook.com/juwaloot', '_blank');
+                            } else if (index === 1) {
+                              // 2nd Deposit Offer - Juwa Jackpot
+                              window.open('https://www.facebook.com/JuwaJackpots/', '_blank');
+                            } else if (index === 2) {
+                              // Referral Bonus - Juwa Loot
+                              window.open('https://www.facebook.com/juwaloot', '_blank');
+                            }
+                          }}>Join Now</Button>
                         </div>
                       </div>
                     </div>
@@ -217,7 +228,7 @@ export default function WebsiteLiveStarter() {
             { img: "/partner2.png", blocks: [
               { title: "First-time player?", desc: "Dive in and claim your juicy welcome offer!", cta: "JOIN NOW" }
             ]},
-            { img: "/partner3.png", blocks: [
+            { img: "/juwa jackpots.jpg", blocks: [
               { title: "Big wins spotlight", desc: "Follow for highlights, tips and massive wins.", cta: "FOLLOW NOW" }
             ]},
           ];
@@ -266,7 +277,7 @@ export default function WebsiteLiveStarter() {
                           className="bg-white text-neutral-900 hover:opacity-90 text-sm md:text-base px-4 py-2"
                           onClick={() => {
                             if (b.cta === "JOIN THE FUN") {
-                              window.open('https://www.facebook.com/people/Fortune-JUWA/61565056061906/?mibextid=wwXIfr&rdid=903GVl4fnaFYCKne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JNy4sFfi2%2F%3Fmibextid%3DwwXIfr', '_blank');
+                              window.open('https://www.facebook.com/share/17aBWNSxLD/?mibextid=wwXIfr', '_blank');
                             } else if (b.cta === "JOIN NOW") {
                               window.open('https://www.facebook.com/juwaloot', '_blank');
                             } else if (b.cta === "FOLLOW NOW") {
@@ -681,6 +692,15 @@ export default function WebsiteLiveStarter() {
   const BlogPage = () => {
     const blogPosts = [
       {
+        id: 'origin-of-juwa',
+        title: 'The Origin of Juwa: How Juwa777 Came to Life',
+        category: 'Company Story',
+        excerpt: 'Discover the fascinating story of how Juwa777 was born during the COVID-19 pandemic, from the Sanskrit word "Juwa" to becoming one of the largest online gaming platforms in the United States.',
+        date: 'December 18, 2025',
+        readTime: '6 min read',
+        image: '/blog imgae/welcome to fabulous juwa online.png'
+      },
+      {
         id: 'download-juwa-777',
         title: 'Download Juwa 777 App: Complete Installation Guide for Android and iOS',
         category: 'Getting Started',
@@ -697,15 +717,6 @@ export default function WebsiteLiveStarter() {
         date: 'January 8, 2025',
         readTime: '6 min read',
         image: '/blog imgae/ultra big win with juwa.png'
-      },
-      {
-        id: 'play-juwa-online-games',
-        title: 'Play Juwa Online Games: No Download Required for Android and iOS',
-        category: 'Getting Started',
-        excerpt: 'Learn how to play Juwa games directly in your browser without downloading the app. Access casino-style games instantly on Android, iOS, and desktop devices.',
-        date: 'January 9, 2025',
-        readTime: '5 min read',
-        image: '/blog imgae/play juwa online.png'
       },
       {
         id: 'juwa-777-app-troubleshooting',
@@ -2130,6 +2141,344 @@ export default function WebsiteLiveStarter() {
     </section>
   );
 
+  const OriginOfJuwaBlog = () => (
+    <section className="px-6 md:px-10 py-12 bg-neutral-50 dark:bg-neutral-950">
+      <div className="max-w-4xl mx-auto">
+        {/* Breadcrumb */}
+        <div className="mb-6 flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400">
+          <a href="#blog" className="hover:text-red-600 dark:hover:text-red-400 transition-colors">Blog</a>
+          <span>/</span>
+          <span>Company Story</span>
+        </div>
+
+        {/* Header */}
+        <div className="mb-8">
+          <div className="inline-block px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 text-sm font-semibold rounded-full mb-4">
+            Company Story
+          </div>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-neutral-900 dark:text-white mb-4 leading-tight">
+            The Origin of Juwa: How Juwa777 Came to Life
+          </h1>
+          <div className="flex items-center gap-4 text-sm text-neutral-600 dark:text-neutral-400">
+            <div className="flex items-center gap-2">
+              <Clock className="h-4 w-4" />
+              <span>6 min read</span>
+            </div>
+            <span>•</span>
+            <span>December 18, 2025</span>
+          </div>
+        </div>
+
+        {/* Hero Image */}
+        <div className="mb-8 rounded-2xl overflow-hidden">
+          <img 
+            src="/blog imgae/welcome to fabulous juwa online.png" 
+            alt="The Origin of Juwa777"
+            className="w-full h-auto object-cover"
+            onError={(e) => {
+              e.target.style.display = 'none';
+            }}
+          />
+        </div>
+
+        {/* Introduction */}
+        <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
+          <p className="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+            Discover the fascinating story of how Juwa777 was born during the COVID-19 pandemic, from the Sanskrit word "Juwa" to becoming one of the largest online gaming platforms in the United States. This is the journey of innovation, opportunity, and the creation of a gaming revolution.
+          </p>
+        </div>
+
+        {/* The Beginning Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3">
+            <Rocket className="h-8 w-8 text-red-600" />
+            The Story Begins: COVID-19 Changes Everything
+          </h2>
+          <Card className="mb-4 border-l-4 border-l-red-600 dark:border-l-red-500">
+            <CardContent className="p-6">
+              <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                The story of Juwa started during the COVID-19 pandemic. Before COVID, many people liked to play slot machines at gas stations or local game stores. That was the main way people played games. Some online games like Golden Dragon and RiverSweeps were already around, but most players did not know about them. They liked going to stores to play in person.
+              </p>
+              <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                In 2020, COVID changed everything. People had to stay home, and many stores were closed. Because of this, players started looking for ways to play games online. Games like FireKirin, Orion Stars, and SoloWay Milky Way became popular. Still, there was space for something new and better.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* The Opportunity Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3">
+            <Sparkles className="h-8 w-8 text-red-600" />
+            Seeing the Opportunity
+          </h2>
+          <Card className="mb-4 border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6">
+              <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                That is when the founders of Juwa777 saw a big opportunity. They wanted to create a platform where people could play Juwa online and enjoy the same games they loved in stores.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* The Name Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3">
+            <Globe className="h-8 w-8 text-red-600" />
+            Finding the Perfect Name: The Sanskrit Connection
+          </h2>
+          <Card className="mb-4 border-l-4 border-l-purple-600 dark:border-l-purple-500">
+            <CardContent className="p-6">
+              <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                Finding the right name was hard. The founders looked at Greek and Latin words, but none felt right. One day, a founder found the word "Juwa" from Sanskrit, one of the oldest languages in the world. In Sanskrit, Juwa means betting or gambling. The founders loved the meaning and chose it as the name.
+              </p>
+              <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg p-4 mt-4">
+                <p className="text-sm text-purple-800 dark:text-purple-200">
+                  <strong>Fun Fact:</strong> To make the name even luckier, they added 777, and Juwa777 was born. The number 777 is considered lucky in many cultures, making it the perfect addition to the Sanskrit name.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* The Launch Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3">
+            <Package className="h-8 w-8 text-red-600" />
+            The Official Launch: October 2021
+          </h2>
+          <Card className="mb-4 border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6">
+              <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                The Juwa team worked hard to bring popular store games online. These games included Life of Luxury, fish games, Keno, and many slot games. After months of hard work, the Juwa app was officially released in October 2021.
+              </p>
+              <div className="grid md:grid-cols-2 gap-4 mt-4">
+                <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-lg p-4">
+                  <div className="font-semibold text-neutral-900 dark:text-white mb-2">Launch Date</div>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-300">October 2021</p>
+                </div>
+                <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-lg p-4">
+                  <div className="font-semibold text-neutral-900 dark:text-white mb-2">Initial Games</div>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-300">Life of Luxury, Fish Games, Keno, Slots</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Early Growth Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3">
+            <Users className="h-8 w-8 text-red-600" />
+            Early Growth and Promotions
+          </h2>
+          <Card className="mb-4 border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6">
+              <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                At first, Juwa was shared with a small group of players. Promotions were done through Facebook and Telegram. Soon after, Juwa added a 20% reload bonus, which helped Juwa grow very fast.
+              </p>
+              <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4 mt-4">
+                <p className="text-sm text-green-800 dark:text-green-200">
+                  <strong>Growth Strategy:</strong> The combination of social media marketing and attractive reload bonuses created a strong foundation for rapid expansion.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Experience Mode Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3">
+            <Gamepad2 className="h-8 w-8 text-red-600" />
+            Innovation: Experience Mode
+          </h2>
+          <Card className="mb-4 border-l-4 border-l-blue-600 dark:border-l-blue-500">
+            <CardContent className="p-6">
+              <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                One special feature of Juwa online was the ability to play games without loading money. Some fish games and slot games on Juwa777 have Experience Mode, where players get free credits to practice. This helped new players learn the games without any risk.
+              </p>
+              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mt-4">
+                <p className="text-sm text-blue-800 dark:text-blue-200">
+                  <strong>Player-Friendly Feature:</strong> Experience Mode allows players to try games risk-free, making Juwa777 more accessible to newcomers and helping them build confidence before playing with real credits.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Distributor Credits Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3">
+            <DollarSign className="h-8 w-8 text-red-600" />
+            Expanding Through Distributor Credits
+          </h2>
+          <Card className="mb-4 border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6">
+              <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                As more people joined, Juwa allowed users to buy distributor credits so they could grow their own gaming business. This helped Juwa expand even more.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Revolutionary Features Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3">
+            <Zap className="h-8 w-8 text-red-600" />
+            Revolutionary Features That Changed Online Gaming
+          </h2>
+          <p className="text-neutral-700 dark:text-neutral-300 mb-6 leading-relaxed">
+            Later, Juwa added new features that changed online gaming. These included wager bonuses, cash back rewards, leaderboards, and auto wheels. The wager bonus and cash back features were very special because no other platform had them at the time. Later, many platforms copied these ideas from Juwa777.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-4 mb-4">
+            <Card className="border-l-4 border-l-orange-600 dark:border-l-orange-500">
+              <CardContent className="p-6">
+                <div className="mb-4">
+                  <img 
+                    src="/wager juwa777.png" 
+                    alt="Wager Bonus Feature"
+                    className="w-full h-auto rounded-lg"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                    }}
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2">
+                  <Percent className="h-5 w-5 text-orange-600" />
+                  Wager Bonus
+                </h3>
+                <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                  A revolutionary feature that rewards players based on their wagering activity. This innovative bonus system was first introduced by Juwa777 and later adopted by many other platforms.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-green-600 dark:border-l-green-500">
+              <CardContent className="p-6">
+                <div className="mb-4">
+                  <img 
+                    src="/cashback juwa777.png" 
+                    alt="Cash Back Rewards Feature"
+                    className="w-full h-auto rounded-lg"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                    }}
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2">
+                  <DollarSign className="h-5 w-5 text-green-600" />
+                  Cash Back Rewards
+                </h3>
+                <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                  Another industry-first feature that gives players cash back on their gameplay. This player-friendly innovation set a new standard in online gaming rewards.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Card className="mb-4 border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3">Other Innovative Features</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <div className="font-semibold text-neutral-900 dark:text-white">Leaderboards</div>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Compete with other players and climb the ranks</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <div className="font-semibold text-neutral-900 dark:text-white">Auto Wheels</div>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300">Automated bonus wheels for exciting rewards</p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Today Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3">
+            <Star className="h-8 w-8 text-red-600" />
+            Juwa777 Today: A Gaming Giant
+          </h2>
+          <Card className="mb-4 border border-neutral-200/60 dark:border-neutral-800/60">
+            <CardContent className="p-6">
+              <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                Today, Juwa777 is one of the biggest online gaming platforms in the United States. This success comes from hard-working staff and loyal players who love to play Juwa online.
+              </p>
+              <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 mt-4">
+                <p className="text-sm text-red-800 dark:text-red-200 font-semibold">
+                  <strong>Success Factors:</strong> Innovation, player-focused features, and a dedicated community have made Juwa777 a leader in the online gaming industry.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* The Future Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3">
+            <Rocket className="h-8 w-8 text-red-600" />
+            The Journey Continues: Juwa 2.0
+          </h2>
+          <Card className="mb-4 border-l-4 border-l-red-600 dark:border-l-red-500">
+            <CardContent className="p-6">
+              <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                And the journey is not over yet. With the release of Juwa 2, the Juwa platform keeps growing and getting better.
+              </p>
+              <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                Check out Juwa777 today and be part of the next chapter of Juwa's story.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Call to Action */}
+        <Card className="bg-gradient-to-r from-red-600 to-red-800 border-0">
+          <CardContent className="p-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">Join the Juwa777 Community</h2>
+            <p className="text-white/90 mb-6 text-lg">
+              Be part of the next chapter in online gaming. Experience the platform that revolutionized the industry.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button 
+                onClick={() => window.open('https://dl.juwa777.com/', '_blank')}
+                className="bg-white text-red-600 hover:bg-neutral-100 font-semibold"
+              >
+                <Download className="h-4 w-4 mr-2" />
+                Download Juwa777 Now
+              </Button>
+              <Button 
+                onClick={() => window.open('https://www.facebook.com/people/Fortune-JUWA/61565056061906/?mibextid=wwXIfr&rdid=903GVl4fnaFYCKne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JNy4sFfi2%2F%3Fmibextid%3DwwXIfr', '_blank')}
+                variant="outline"
+                className="border-white text-white hover:bg-white/10 font-semibold"
+              >
+                <Play className="h-4 w-4 mr-2" />
+                Play Now
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Back to Blog */}
+        <div className="mt-8 text-center">
+          <a 
+            href="#blog" 
+            className="inline-flex items-center gap-2 text-red-600 dark:text-red-400 hover:gap-3 transition-all font-medium"
+          >
+            <ArrowRight className="h-4 w-4 rotate-180" />
+            Back to Blog
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+
   const ContactPage = () => {
     const [name, setName] = useState("");
     const [userEmail, setUserEmail] = useState("");
@@ -2294,7 +2643,7 @@ export default function WebsiteLiveStarter() {
           </Card>
           <div className="space-y-4">
             <Card className="border border-neutral-200/60 dark:border-neutral-800/60"><CardContent className="p-5"><div className="font-semibold">Live chat</div><p className="text-sm text-neutral-600 dark:text-neutral-300">Chat with an agent 24/7.</p></CardContent></Card>
-              <Card className="border border-neutral-200/60 dark:border-neutral-800/60"><CardContent className="p-5"><div className="font-semibold">Email support</div><p className="text-sm text-neutral-600 dark:text-neutral-300">support@juwagame.com</p></CardContent></Card>
+              <Card className="border border-neutral-200/60 dark:border-neutral-800/60"><CardContent className="p-5"><div className="font-semibold">Email support</div><p className="text-sm text-neutral-600 dark:text-neutral-300">support@juwa777.com</p></CardContent></Card>
             <a href="#faq" className="block group">
               <Card className="border border-neutral-200/60 dark:border-neutral-800/60 cursor-pointer hover:bg-neutral-50 dark:hover:bg-neutral-800/50 hover:border-red-500 dark:hover:border-red-500 active:bg-red-50 dark:active:bg-red-900/20 active:border-red-500 transition-all duration-200 hover:shadow-md active:shadow-lg">
                 <CardContent className="p-5">
@@ -2433,7 +2782,7 @@ export default function WebsiteLiveStarter() {
                 <Button variant="outline" className="border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-800/50" onClick={() => window.location.hash = '#faq'}>
                   FAQ
                 </Button>
-                <Button style={{ background: playNowColor, borderColor: playNowColor }} className="text-white hover:opacity-90" onClick={() => window.open('https://www.facebook.com/people/Fortune-JUWA/61565056061906/?mibextid=wwXIfr&rdid=903GVl4fnaFYCKne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JNy4sFfi2%2F%3Fmibextid%3DwwXIfr', '_blank')}>
+                <Button style={{ background: playNowColor, borderColor: playNowColor }} className="text-white hover:opacity-90" onClick={() => window.open('https://www.facebook.com/share/17aBWNSxLD/?mibextid=wwXIfr', '_blank')}>
                   <Sparkles className="h-4 w-4 mr-2" />
                   Play now
                 </Button>
@@ -2441,7 +2790,7 @@ export default function WebsiteLiveStarter() {
               
               {/* Mobile Navigation */}
               <div className="flex md:hidden items-center gap-3">
-                <Button style={{ background: playNowColor, borderColor: playNowColor }} className="text-white hover:opacity-90 px-4 py-2" onClick={() => window.open('https://www.facebook.com/people/Fortune-JUWA/61565056061906/?mibextid=wwXIfr&rdid=903GVl4fnaFYCKne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JNy4sFfi2%2F%3Fmibextid%3DwwXIfr', '_blank')}>
+                <Button style={{ background: playNowColor, borderColor: playNowColor }} className="text-white hover:opacity-90 px-4 py-2" onClick={() => window.open('https://www.facebook.com/share/17aBWNSxLD/?mibextid=wwXIfr', '_blank')}>
                 <Sparkles className="h-4 w-4 mr-2" />
                 Play now
               </Button>
@@ -2474,8 +2823,8 @@ export default function WebsiteLiveStarter() {
             {route === 'blog' && <BlogPage />}
             {route === 'blog-download-juwa-777' && <DownloadGuideBlog />}
             {route === 'blog-juwa-no-deposit-bonus' && <NoDepositBonusBlog />}
-            {route === 'blog-play-juwa-online-games' && <PlayJuwaOnlineBlog />}
             {route === 'blog-juwa-777-app-troubleshooting' && <TroubleshootingBlog />}
+            {route === 'blog-origin-of-juwa' && <OriginOfJuwaBlog />}
             {route === 'contact' && <ContactPage />}
             {route === 'faq' && <FAQPage />}
 
@@ -2530,7 +2879,7 @@ export default function WebsiteLiveStarter() {
 
         {/* Messenger Icon */}
         <a
-          href="https://www.facebook.com/people/Fortune-JUWA/61565056061906/?mibextid=wwXIfr&rdid=903GVl4fnaFYCKne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JNy4sFfi2%2F%3Fmibextid%3DwwXIfr"
+          href="https://www.facebook.com/share/17aBWNSxLD/?mibextid=wwXIfr"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-white dark:bg-neutral-800 rounded-full p-3 shadow-2xl hover:shadow-[#0866ff]/50 transition-all duration-300 hover:scale-110 active:scale-95 group border-2 border-[#0866ff]"

@@ -68,3 +68,6 @@ By explicitly setting canonical tags and redirects, you tell Google which domain
 - Keep canonical tags pointing to `juwagame.com` on both
 - Use different content on each domain (not recommended for SEO)
 
+
+
+
