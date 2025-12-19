@@ -29,7 +29,7 @@ export default function WebsiteLiveStarter() {
 
   // Controls
   const [tagline, setTagline] = useState("BE A BIG WINNER WITH OUR HOT JACKPOT");
-  const [heroDesc, setHeroDesc] = useState("Download Juwa777 app for Android and iOS - Juwa 2.0 with over 100 free casino games. Play slots, fish games, and keno. Get welcome bonuses and start winning real money today!");
+  const [heroDesc, setHeroDesc] = useState("Experience unmatched quality in gameplay and customer service. Play Juwa777 - the premier Juwa game platform with over 100 free social casino games.");
   const [dark, setDark] = useState(true);
   const [featureCount, setFeatureCount] = useState(3);
   const [accentHue, setAccentHue] = useState(226);
@@ -61,7 +61,9 @@ export default function WebsiteLiveStarter() {
         <div className="absolute -bottom-16 -right-16 h-72 w-72 rounded-full blur-3xl opacity-20 z-20" style={{ background: accent }} />
         
         <div className="relative max-w-4xl z-30">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white">{tagline}</h1>
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white">
+            BE A BIG WINNER WITH OUR<br />HOT JACKPOT
+          </h1>
           <p className="mt-4 text-neutral-300 text-base md:text-lg">{heroDesc}</p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button style={{ background: playNowColor, borderColor: playNowColor }} className="text-white hover:opacity-90" onClick={() => window.open('https://www.facebook.com/share/17aBWNSxLD/?mibextid=wwXIfr', '_blank')}>
@@ -780,10 +782,10 @@ export default function WebsiteLiveStarter() {
                       Read more <ArrowRight className="h-4 w-4" />
                     </div>
                   </div>
-                </CardContent>
-              </Card>
+              </CardContent>
+            </Card>
               </div>
-            ))}
+          ))}
         </div>
       </div>
     </section>
